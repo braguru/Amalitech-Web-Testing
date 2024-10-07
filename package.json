@@ -16,5 +16,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@at-web/ui": "^0.1.0"
+  }
 }
