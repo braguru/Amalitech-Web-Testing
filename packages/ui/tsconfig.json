@@ -1,0 +1,12 @@
+{
+  "extends": "@amt-web/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "paths": {
+      "react": ["./node_modules/@types/react", "./node_modules/react", "./node_modules/next"]
+    }
+
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

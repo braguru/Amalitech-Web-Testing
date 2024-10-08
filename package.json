@@ -1,23 +1,30 @@
 {
+  "name": "my-turborepo",
+  "version": "0.0.0",
   "private": true,
+  "description": "",
+  "author": "",
+  "license": "UNLICENSED",
   "scripts": {
-    "build": "turbo build",
     "dev": "turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "test:e2e": "turbo test:e2e",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
+    "@amt-web/eslint-config": "*",
+    "@amt-web/typescript-config": "*",
     "prettier": "^3.2.5",
     "turbo": "^2.1.3"
   },
-  "name": "with-vite",
+  "engines": {
+    "node": ">=18"
+  },
   "packageManager": "npm@10.8.2",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "dependencies": {
-    "@at-web/ui": "^0.1.0"
-  }
+  ]
 }

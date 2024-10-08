@@ -1,0 +1,3 @@
+{
+  "extends": "@amt-web/typescript-config/base.json"
+}
