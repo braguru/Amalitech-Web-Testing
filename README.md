@@ -1,7 +1,6 @@
 # Monorepo Start with Sanity starter
 
-This  a starter repo for website project with Sanity
-
+This a starter repo for website project with Sanity
 
 ## What's inside?
 

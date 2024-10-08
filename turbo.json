@@ -22,6 +22,7 @@
     },
     "lint": {},
     "test": {},
-    "build:stroybook": {}
+    "build:stroybook": {},
+    "cms:dev": {}
   }
 }
