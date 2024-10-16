@@ -44,9 +44,18 @@ export const Large: Story = {
   },
 }
 
-export const Small: Story = {
+
+export const small: Story = {
   args: {
     size: 'small',
     label: 'Button',
   },
 }
+
+export const myStory = {
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/board/QBBqRYCVDFG9uwdM4myMCt/Pre-Kickoff%3A-Amalitech-Website?node-id=1-3179&node-type=sticky&t=S4eSH7rl9bpkFIMP-0",
+    },
+  },}
