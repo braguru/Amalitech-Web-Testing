@@ -4,7 +4,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'prettier',
-    'turbo',
+    'turbo'
   ],
   plugins: ['@typescript-eslint/eslint-plugin'],
   parser: '@typescript-eslint/parser',
@@ -15,6 +15,6 @@ module.exports = {
     '.turbo/',
     'dist/',
     'coverage/',
-    'node_modules/',
-  ],
-};
+    'node_modules/'
+  ]
+}

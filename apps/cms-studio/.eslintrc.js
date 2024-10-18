@@ -1,7 +1,8 @@
-{
-  "extends": ["@sanity/eslint-config-studio"],
-  "overrides": [{
-    "files": ["*.ts", "*.tsx"]
-  }]
-
+module.exports = {
+  extends: ['@sanity/eslint-config-studio'],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+    },
+  ],
 }

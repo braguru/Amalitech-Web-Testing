@@ -8,7 +8,7 @@ import styles from './page.module.css'
 const Gradient = ({
   conic,
   className,
-  small,
+  small
 }: Readonly<{
   small?: boolean
   conic?: boolean
@@ -20,7 +20,7 @@ const Gradient = ({
         styles.gradient,
         conic ? styles.glowConic : undefined,
         small ? styles.gradientSmall : styles.gradientLarge,
-        className,
+        className
       ]
         .filter(Boolean)
         .join(' ')}
