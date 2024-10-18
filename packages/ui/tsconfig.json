@@ -7,6 +7,6 @@
     }
 
   },
-  "include": ["src"],
+  "include": ["src", "../../jest.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
