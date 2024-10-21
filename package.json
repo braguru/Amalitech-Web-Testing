@@ -1,11 +1,12 @@
 {
-  "name": "my-turborepo",
+  "name": "amalitech-global-website",
   "version": "0.0.0",
   "private": true,
   "description": "",
   "author": "",
   "license": "UNLICENSED",
   "scripts": {
+    "ui": "turbo ",
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",

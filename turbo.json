@@ -28,6 +28,7 @@
       "persistent": true
     },
     "build:storybook": {},
-    "cms:dev": {}
+    "cms:dev": {},
+    "ui": {}
   }
 }

@@ -1,6 +1,7 @@
-import type { StorybookConfig } from '@storybook/react-vite'
-
-import { join, dirname } from 'path'
+import type { StorybookConfig } from '@storybook/react-vite';
+import path, { dirname, join } from 'path';
+import { mergeConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -12,6 +13,7 @@ function getAbsolutePath(value: string): any {
 const config: StorybookConfig = {
   stories: ['../../../packages/ui/src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
+    '@storybook/addon-themes',
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-essentials'),
     getAbsolutePath('@storybook/addon-interactions'),
@@ -20,7 +22,28 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
-    options: {}
+    options: {},
+  },
+  /**
+   * Adds all the path aliases listed in the tsconfig file to storybook config
+   * @param config config object for storybook
+   * @returns the modified config object
+   */
+  viteFinal: async (config) => {
+    config.plugins?.push(tsconfigPaths());
+
+    return mergeConfig(config, {
+      server: {
+        watch: {
+          ignored: ['**/coverage/**', '**/node_modules/**', '**/dist/**']
+        }
+      }
+    });
+  },
+
+  typescript: {
+    reactDocgen: 'react-docgen'
+
   }
 }
 export default config

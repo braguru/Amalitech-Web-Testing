@@ -59,6 +59,9 @@ const RootPage = ({ params }: { params: { forTest?: boolean } }) => {
             rel="noopener noreferrer"
             target="_blank"
           >
+            <div className="p-4 border-4 border-white text-white">
+              Hello, Tailwind CSS!
+            </div>
             By{' '}
             <Image
               alt="Vercel Logo"
