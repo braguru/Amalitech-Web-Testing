@@ -2,19 +2,17 @@ import React from 'react'
 import { LinkProps } from './Link.type'
 import NextLink from 'next/link'
 
-export const ExternalLink = (props: LinkProps) => {
-  const {
-    href,
-    target,
-    title,
-    children,
-    color,
-    iconLeft,
-    className,
-    style,
-    ...rest
-  } = props
-
+export const ExternalLink = ({
+  href,
+  target,
+  title,
+  children,
+  color,
+  iconLeft,
+  className,
+  style,
+  ...props
+}: LinkProps) => {
   return (
     <a
       href={href}
@@ -22,16 +20,14 @@ export const ExternalLink = (props: LinkProps) => {
       title={title}
       className={className}
       style={style}
-      {...rest}
+      {...props}
     >
       {children}
     </a>
   )
 }
 
-export const InternalLink = (props: LinkProps) => {
-  const { href, children, ...rest } = props
-
+export const InternalLink = ({ href, children, ...props }: LinkProps) => {
   return (
     // <NextLink href={href} {...rest}>
     //   {children}
