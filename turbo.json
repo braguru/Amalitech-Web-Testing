@@ -10,7 +10,8 @@
     },
     "build": {
       "dependsOn": [
-        "^build"
+        "^build",
+        "^test"
       ],
      "inputs": ["$TURBO_DEFAULT$", "!**/*.stories.{tsx,jsx,mdx}"],
       "outputs": [
@@ -22,7 +23,12 @@
     },
     "lint": {},
     "test": {},
-    "build:stroybook": {},
-    "cms:dev": {}
+    "test:watch": {
+      "cache": false, 
+      "persistent": true
+    },
+    "build:storybook": {},
+    "cms:dev": {},
+    "ui": {}
   }
 }

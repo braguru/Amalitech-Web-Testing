@@ -1,6 +1,6 @@
-const { resolve } = require('node:path');
+const { resolve } = require('node:path')
 
-const project = resolve(process.cwd(), 'tsconfig.json');
+const project = resolve(process.cwd(), 'tsconfig.json')
 
 /**
  * This is a custom ESLint configuration for use with
@@ -17,18 +17,18 @@ module.exports = {
   plugins: ['only-warn'],
   globals: {
     React: true,
-    JSX: true,
+    JSX: true
   },
   env: {
-    browser: true,
+    browser: true
   },
   settings: {
     'import/resolver': {
       typescript: {
-        project,
-      },
-    },
+        project
+      }
+    }
   },
   ignorePatterns: ['.*.js', 'node_modules/', 'dist/'],
-  overrides: [{ files: ['*.js?(x)', '*.ts?(x)'] }],
-};
+  overrides: [{ files: ['*.js?(x)', '*.ts?(x)'] }]
+}

@@ -48,6 +48,11 @@ npm run build
 npm run dev
 ```
 
+```bash
+# Will run the development server for component library & storybook.
+npm run ui:dev
+```
+
 #### Lint
 
 ```bash
