@@ -6,7 +6,6 @@
   "types": "./dist/index.d.ts",
   "private": true,
   "scripts": {
-    "ui": "npm run build",
     "dev": "tsup index.ts --format cjs,esm --dts",
     "build": "tsup index.ts --format cjs,esm --dts",
     "lint": "eslint --fix",

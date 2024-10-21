@@ -6,7 +6,7 @@
   "author": "",
   "license": "UNLICENSED",
   "scripts": {
-    "ui": "turbo ",
+    "ui:dev": "turbo dev --filter=@amt-web/ui --filter=storybook --parallel",
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
