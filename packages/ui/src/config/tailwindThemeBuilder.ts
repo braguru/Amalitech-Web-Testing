@@ -1,4 +1,4 @@
-import { colors } from '../tailwind-theme-objects';
+import { colors, fonts, breakpoints } from '../tailwind-theme-objects';
 import { CustomThemeConfig } from 'tailwindcss/types/config';
 
 export const generateTailwindConfigTheme = () => {
@@ -8,10 +8,10 @@ export const generateTailwindConfigTheme = () => {
         }
     >
         | undefined = {
-
-            // Place all configurations you would like to add/extend into tailwind's theme config.
         extend: {
             colors: colors,
+            screens: breakpoints,
+            fontFamily: fonts,
         }
     }
 

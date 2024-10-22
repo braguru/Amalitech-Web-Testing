@@ -14,7 +14,7 @@ export function Button({ label, backgroundColor, size = "md", children }: Button
   };
 
   return (
-    <button style={style}>
+    <button style={style} className="bg-primary-600">
       {children ? children :label}
     </button>
   );

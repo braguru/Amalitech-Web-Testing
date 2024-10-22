@@ -1,17 +1,9 @@
+@import "./styles/colors.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* TODO: Change these dummy variables to actual colors defined in the UI design */
-  --primary: #e97700;
-  --primary-100: #ffe7db;
-  --primary-200: #ffd0b6;
-  --primary-300: #ffb892;
-  --primary-400: #ffa16d;
-  --primary-500: #ff8b40;
-  --primary-600: #e97700;
-  --primary-700: #c85b00;
-  --primary-800: #a13f00;
-  --primary-900: #7d3200;
+body {
+  font-family: 'Poppins', sans-serif;
 }
