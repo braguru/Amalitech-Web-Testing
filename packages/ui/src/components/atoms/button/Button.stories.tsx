@@ -1,61 +1,67 @@
 import type { Meta, StoryObj } from '@storybook/react'
-
+import {
+  buttonPrimaryArgs,
+  buttonSmallArgs,
+  buttonSecondaryArgs,
+  longLabelArgs,
+  buttonLargeArgs,
+} from './Button.mock'
 import { Button } from './Button'
+import { ButtonProps } from './Button.types'
+import React, { ComponentProps } from 'react'
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
-  title: 'Components/Button',
-  component: Button,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered'
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+type StoryProps = ComponentProps<typeof Button>;
+
+const meta: Meta<StoryProps> = {
+  title: 'UI Components/Button',
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-    // backgroundColor: { control: 'color' },
-  },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: {}
-} satisfies Meta<typeof Button>
-
-export default meta
-type Story = StoryObj<typeof meta>
-
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
-  args: {
-    primary: true,
-    label: 'Button'
-  }
-}
-
-export const Secondary: Story = {
-  args: {
-    label: 'Button'
-  }
-}
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button'
-  }
-}
-
-export const small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button'
-  }
-}
-
-export const myStory = {
   parameters: {
     design: {
       type: 'figma',
-      url: 'https://www.figma.com/board/QBBqRYCVDFG9uwdM4myMCt/Pre-Kickoff%3A-Amalitech-Website?node-id=1-3179&node-type=sticky&t=S4eSH7rl9bpkFIMP-0'
-    }
-  }
+      url: 'https://www.figma.com/board/QBBqRYCVDFG9uwdM4myMCt/Pre-Kickoff%3A-Amalitech-Website?node-id=1-3179&node-type=sticky&t=S4eSH7rl9bpkFIMP-0',
+    },
+  },
+  argTypes: {
+    label: { control: 'text', description: 'The button label' },
+    backgroundColor: { control: 'color', description: 'For custom buttons' },
+    size: {
+      control: { type: 'radio', options: ['sm', 'md', 'lg'] },
+      description: 'How large a can be',
+      table: { type: { summary: 'small | medium | large' } },
+    },
+  },
 }
+
+export default meta
+
+type Story = StoryObj<ButtonProps>
+
+const ButtonStory: Story = {
+  render: (args ) => <Button {...args}/>,
+}
+
+export const Primary: Story = {
+  ...ButtonStory,
+  args: buttonPrimaryArgs,
+}
+
+export const Secondary: Story = {
+  ...ButtonStory,
+  args: buttonSecondaryArgs,
+}
+
+export const Large: Story = {
+  ...ButtonStory,
+  args: buttonLargeArgs,
+}
+
+export const Small: Story = {
+  ...ButtonStory,
+  args: buttonSmallArgs,
+}
+
+export const LongLabel: Story = {
+  ...ButtonStory,
+  args: longLabelArgs,
+}
+
