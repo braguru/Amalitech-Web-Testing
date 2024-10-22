@@ -1,7 +1,8 @@
-export interface ButtonProps {
-    children?: React.ReactNode
-    primary?: boolean
-    label?: string
-    size?: string
-    onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  }
+import {ButtonHTMLAttributes} from "react";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  label: string;
+  backgroundColor: string;
+  size?: "sm" | "md" | "lg";
+
+}

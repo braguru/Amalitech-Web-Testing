@@ -1,12 +1,21 @@
 import React from 'react'
-import { ButtonProps } from './Button.types'
+import {ButtonProps} from "./Button.types";
 
-export function Button({ label, ...other }: ButtonProps): JSX.Element {
+export function Button({ label, backgroundColor, size = "md", children }: ButtonProps) {
+  let scale = 1;
+  if (size === "sm") scale = 0.75;
+  if (size === "lg") scale = 1.75;
+
+  const style = {
+    backgroundColor,
+    padding: `${scale * 0.5}rem ${scale}rem`,
+    border: "none",
+    borderRadius: ".5rem"
+  };
+
   return (
-    <button className="border-4 transition-all text-primary  border-white bg-primary hocus:bg-white  hocus:border-primary px-5 py-2 rounded-full text-white hocus:text-primary font-semibold" type="button" {...other}>
-      {label}
+    <button style={style}>
+      {children ? children :label}
     </button>
-  )
+  );
 }
-
-Button.displayName = 'Button'

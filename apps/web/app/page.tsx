@@ -1,4 +1,3 @@
-import { Suspense } from 'react'
 import Image from 'next/image'
 
 import { Button as AMTButton } from '@amt-web/ui'
@@ -25,26 +24,6 @@ const Gradient = ({
         .filter(Boolean)
         .join(' ')}
     />
-  )
-}
-
-const LinksSection = async () => {
-  const fetchLinks = async (): Promise<any[]> => {
-    try {
-      return await (await fetch('http://localhost:3000/links')).json()
-    } catch (_) {
-      return []
-    }
-  }
-
-  const links = await fetchLinks()
-
-  return (
-    <div className={styles.grid}>
-      {links.map(({ title, url, description }) => (
-        <AMTButton>{description}</AMTButton>
-      ))}
-    </div>
   )
 }
 
@@ -75,7 +54,7 @@ const RootPage = ({ params }: { params: { forTest?: boolean } }) => {
         </div>
       </div>
 
-      <AMTButton>Click me!</AMTButton>
+      <AMTButton backgroundColor="#1ecbe1" label="Click me">Click me!</AMTButton>
 
       <div className={styles.hero}>
         <div className={styles.heroContent}>
