@@ -1,8 +1,7 @@
-import {ButtonProps} from "./ButtonType";
+import {ButtonProps} from "./Button.types";
 
 export const buttonPrimaryArgs: Partial<ButtonProps> = {
   label: 'Read More',
-  backgroundColor: '#1ecbe1',
   size: 'md',
 };
 
