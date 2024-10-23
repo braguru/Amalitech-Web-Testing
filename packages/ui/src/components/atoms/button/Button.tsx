@@ -1,6 +1,7 @@
 import React from 'react'
 import {ButtonProps} from "./Button.types";
 
+
 export function Button({ label, backgroundColor, size = "md", children }: ButtonProps) {
   let scale = 1;
   if (size === "sm") scale = 0.75;
@@ -8,13 +9,11 @@ export function Button({ label, backgroundColor, size = "md", children }: Button
 
   const style = {
     backgroundColor,
-    padding: `${scale * 0.5}rem ${scale}rem`,
     border: "none",
-    borderRadius: ".5rem"
   };
 
   return (
-    <button style={style} className="bg-primary-600">
+    <button style={style} className='bg-primary-600 rounded-round p-lg shadow-xxl'>
       {children ? children :label}
     </button>
   );
