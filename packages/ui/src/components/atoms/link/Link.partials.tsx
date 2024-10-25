@@ -6,14 +6,13 @@ import { ArrowNorthEast } from '../icons/ArrowNorthEast'
 
 const LinkVariants = cva(
   [
-    'text-primary font-semibold hover:text-primary-700 hover:underline focus:text-primary-700 visited:bg-primary-400 disabled:text-primary-200 group'
+    'text-primary font-semibold hover:text-primary-700 hover:underline focus:text-primary-700 focus:border-secondary focus:border-2 visited:bg-primary-400 disabled:text-primary-200 group'
   ],
   {
     variants: {
       variant: {
-        internal: [''],
-        external: ['flex items-center gap-1'],
-        button: ['flex gap-1 p-10 border-secondary border-2  rounded-sm']
+        internal: ['focus:py-0.5'],
+        external: ['flex items-center gap-1 focus:py-1 px-0.5']
       }
     },
     compoundVariants: [{}],
@@ -43,14 +42,18 @@ export const ExternalLink = ({
       target={target}
       title={title}
       className={cx(LinkVariants({ variant }), className)}
-      style={style}
+      style={color ? { color: color, ...style } : style}
       {...props}
     >
       <span
         className={`flex items-center flex-row gap-1 ${iconLeft ? 'flex-row-reverse' : ''}`}
+        style={color ? { color: color } : {}}
       >
         {children}
-        <ArrowNorthEast className="w-[14px] h-[14px] transition-colors group-hover:text-primary-700" />
+        <ArrowNorthEast
+          className="w-[14px] h-[14px] transition-colors group-hover:text-primary-700"
+          style={color ? { color: color, fill: color } : {}}
+        />
       </span>
     </a>
   )
@@ -60,12 +63,15 @@ export const InternalLink = ({
   href = '',
   variant,
   children,
+  color,
+  style,
   ...props
 }: LinkProps) => {
   return (
     <NextLink
       href={href}
       className={cx(LinkVariants({ variant }), props.className)}
+      style={color ? { color: color, ...style } : style}
       {...props}
     >
       {children}
