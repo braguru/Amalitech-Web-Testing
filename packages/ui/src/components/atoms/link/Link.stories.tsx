@@ -14,6 +14,60 @@ const meta = {
       url: 'https://www.figma.com/design/AKrOAmkRETk3sYzaD2WCF9/Amalitech-Website-Redesign?node-id=74-5444&node-type=canvas&t=PYymbCCl1Z4DUWwI-0'
     },
     layout: 'centered'
+  },
+  argTypes: {
+    variant: {
+      control: {
+        type: 'select',
+        options: ['internal', 'external']
+      }
+    },
+    target: {
+      control: {
+        type: 'select',
+        options: [
+          TargetProps.BLANK,
+          TargetProps.PARENT,
+          TargetProps.SELF,
+          TargetProps.TOP
+        ]
+      }
+    },
+    color: {
+      control: {
+        type: 'color'
+      }
+    },
+    href: {
+      control: {
+        type: 'text'
+      }
+    },
+    label: {
+      control: {
+        type: 'text'
+      }
+    },
+    external: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    iconLeft: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    title: {
+      control: {
+        type: 'text'
+      }
+    },
+    children: {
+      control: {
+        type: 'text'
+      }
+    }
   }
 } satisfies Meta<typeof Link>
 
