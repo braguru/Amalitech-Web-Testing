@@ -1,7 +1,7 @@
-import type { StorybookConfig } from '@storybook/react-vite';
-import path, { dirname, join } from 'path';
-import { mergeConfig } from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import type { StorybookConfig } from '@storybook/react-vite'
+import path, { dirname, join, resolve } from 'path'
+import { mergeConfig } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -22,7 +22,7 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
-    options: {},
+    options: {}
   },
   /**
    * Adds all the path aliases listed in the tsconfig file to storybook config
@@ -30,20 +30,28 @@ const config: StorybookConfig = {
    * @returns the modified config object
    */
   viteFinal: async (config) => {
-    config.plugins?.push(tsconfigPaths());
+    config.plugins?.push(tsconfigPaths())
 
     return mergeConfig(config, {
       server: {
         watch: {
           ignored: ['**/coverage/**', '**/node_modules/**', '**/dist/**']
         }
+      },
+      define: {
+        'process.env': {
+          __NEXT_ROUTER_BASEPATH: '',
+          NODE_ENV: 'development'
+        },
+        'process.browser': true
+      },
+      resolve: {
+        alias: {
+          // Add any path aliases your project needs
+          '@': resolve(__dirname, '../../../packages/ui/src')
+        }
       }
-    });
-  },
-
-  typescript: {
-    reactDocgen: 'react-docgen'
-
+    })
   }
 }
 export default config
