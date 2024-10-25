@@ -51,7 +51,7 @@ export const ExternalLink = ({
       >
         {children}
         <ArrowNorthEast
-          className="w-[14px] h-[14px] transition-colors group-hover:text-primary-700"
+          className="w-3.5 h-3.5 transition-colors group-hover:text-primary-700"
           style={color ? { color: color, fill: color } : {}}
         />
       </span>
