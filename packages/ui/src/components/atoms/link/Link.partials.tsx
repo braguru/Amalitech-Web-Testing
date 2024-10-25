@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { LinkProps } from './Link.type'
 import NextLink from 'next/link'
 import { cva, VariantProps, cx } from 'class-variance-authority'
@@ -35,7 +35,7 @@ export const ExternalLink = ({
   style,
   variant,
   ...props
-}: LinkProps) => {
+}: Readonly<PropsWithChildren<LinkProps>>) => {
   return (
     <a
       href={href}
@@ -66,7 +66,7 @@ export const InternalLink = ({
   color,
   style,
   ...props
-}: LinkProps) => {
+}: Readonly<PropsWithChildren<LinkProps>>) => {
   return (
     <NextLink
       href={href}
