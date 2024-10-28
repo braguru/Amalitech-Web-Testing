@@ -1,45 +1,41 @@
 :root {
   --base-white: #fafafa;
   --base-black: #3e3d3a;
+  --base-orange: #ff5a00;
+  --base-blue: #08283b;
+  --base-light-blue: #5daff6;
+  --base-green: #47f56a;
+  --base-yellow: #febe00;
+  --base-red: #ff0000;
+  --base-ultra-marine: #040dbf;
 
-/* Neutrals */
-  --neutrals-1000: #4b4946;
-  --neutrals-900: #5a5755;
-  --neutrals-800: #6a6765;
-  --neutrals-700: #7c7776;
-  --neutrals-600: #8d8989;
-  --neutrals-500: #9e9c9b;
-  --neutrals-400: #b0aeae;
-  --neutrals-300: #c2c1c1;
-  --neutrals-200: #d5d4d4;
-  --neutrals-100: #e7e7e7;
-
- /*Orange */
+  /*Orange - Primary (Primary  Colors) */
   --primary-1000: #461304;
-  --primary-900: #822B0C;
-  --primary-800: #A1320B;
-  --primary-700: #CC3F02;
-  --primary-600: #FF5A00;
-  --primary-500: #FF740A;
-  --primary-400: #FF9332;
-  --primary-300: #FFBC6D;
-  --primary-200: #FFD8A5;
-  --primary-100: #FFEDD3;
+  --primary-900: #822b0c;
+  --primary-800: #a1320b;
+  --primary-700: #cc3f02;
+  --primary-600: #ff5a00;
+  --primary-500: #ff740a;
+  --primary-400: #ff9332;
+  --primary-300: #ffbc6d;
+  --primary-200: #ffd8a5;
+  --primary-100: #ffedd3;
+  --primary: var(--primary-600);
 
-/* Dark Blue */
-  --primary-alt-1000: #08283B;
-  --primary-alt-900: #0F4C6B;
-  --primary-alt-800: #0A5B82;
-  --primary-alt-700: #076C9D;
-  --primary-alt-600: #0787C2;
-  --primary-alt-500: #14A9E3;
-  --primary-alt-400: #3DC0F3;
-  --primary-alt-300: #80D5F9;
-  --primary-alt-200: #BCE7FB;
-  --primary-alt-100: #E1F3FD;
-  --primary-alt: #08283b;
+  /* Dark Blue (Primary Alt Colors) */
+  --primary-alt-1000: #08283b;
+  --primary-alt-900: #0f4c6b;
+  --primary-alt-800: #0a5b82;
+  --primary-alt-700: #076c9d;
+  --primary-alt-600: #0787c2;
+  --primary-alt-500: #14a9e3;
+  --primary-alt-400: #3dc0f3;
+  --primary-alt-300: #80d5f9;
+  --primary-alt-200: #bce7fb;
+  --primary-alt-100: #e1f3fd;
+  --primary-alt: var(--primary-alt-1000);
 
-/* Light Blue */
+  /* Light Blue - (Secondary Color) */
   --secondary-1000: #053762;
   --secondary-900: #084c88;
   --secondary-800: #0a61ad;
@@ -51,8 +47,20 @@
   --secondary-200: #bedffb;
   --secondary-100: #dfeffd;
   --secondary: #5daff6;
+  
+  /* Neutrals */
+  --neutrals-1000: #4b4946;
+  --neutrals-900: #5a5755;
+  --neutrals-800: #6a6765;
+  --neutrals-700: #7c7776;
+  --neutrals-600: #8d8989;
+  --neutrals-500: #9e9c9b;
+  --neutrals-400: #b0aeae;
+  --neutrals-300: #c2c1c1;
+  --neutrals-200: #d5d4d4;
+  --neutrals-100: #e7e7e7;
 
-/*  Yellow (ACCENT COLOR) */
+  /* Yellow - (Accent Color) */
   --accent-1000: #664c00;
   --accent-900: #8c6900;
   --accent-800: #b28500;
@@ -65,20 +73,20 @@
   --accent-100: #fff6da;
   --accent: #febe00;
 
-/* Ultra Marine */
-  --secondary-alt-1000: #02065b;
-  --secondary-alt-900: #03087d;
-  --secondary-alt-800: #030b9e;
-  --secondary-alt-700: #0510e6;
-  --secondary-alt-600: #1823fa;
-  --secondary-alt-500: #3e47fb;
-  --secondary-alt-400: #656cfc;
-  --secondary-alt-300: #8b91fd;
-  --secondary-alt-200: #b2b6fd;
-  --secondary-alt-100: #d8dafe;
-  --secondary-alt: #040dbf;
+  /* Ultra Marine - (Accent Alt) */
+  --accent-alt-1000: #02065b;
+  --accent-alt-900: #03087d;
+  --accent-alt-800: #030b9e;
+  --accent-alt-700: #0510e6;
+  --accent-alt-600: #1823fa;
+  --accent-alt-500: #3e47fb;
+  --accent-alt-400: #6c6cfb;
+  --accent-alt-300: #8b91fd;
+  --accent-alt-200: #b2b6fd;
+  --accent-alt-100: #d8dafe;
+  --accent-alt: #03087d;
 
-/* Green */
+  /* Green */
   --green-1000: #055d17;
   --green-900: #07801f;
   --green-800: #09a228;
@@ -91,7 +99,7 @@
   --green-100: #dafde1;
   --green: #47f56a;
 
-/* Red */
+  /* Red */
   --red-1000: #660000;
   --red-900: #8c0000;
   --red-800: #b30000;
