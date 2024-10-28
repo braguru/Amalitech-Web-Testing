@@ -1,8 +1,8 @@
-import React, { PropsWithChildren } from 'react'
-import { LinkProps } from './Link.type'
+import { cva, cx, VariantProps } from 'class-variance-authority'
 import NextLink from 'next/link'
-import { cva, VariantProps, cx } from 'class-variance-authority'
+import React, { PropsWithChildren } from 'react'
 import { ArrowNorthEast } from '../icons/ArrowNorthEast'
+import { LinkProps } from './Link.type'
 
 const LinkVariants = cva(
   [
@@ -35,29 +35,27 @@ export const ExternalLink = ({
   style,
   variant,
   ...props
-}: Readonly<PropsWithChildren<LinkProps>>) => {
-  return (
-    <a
-      href={href}
-      target={target}
-      title={title}
-      className={cx(LinkVariants({ variant }), className)}
-      style={color ? { color: color, ...style } : style}
-      {...props}
+}: Readonly<PropsWithChildren<LinkProps>>) => (
+  <a
+    href={href}
+    target={target}
+    title={title}
+    className={cx(LinkVariants({ variant }), className)}
+    style={color ? { color: color, ...style } : style}
+    {...props}
+  >
+    <span
+      className={`flex items-center flex-row gap-1 ${iconLeft ? 'flex-row-reverse' : ''}`}
+      style={color ? { color: color } : {}}
     >
-      <span
-        className={`flex items-center flex-row gap-1 ${iconLeft ? 'flex-row-reverse' : ''}`}
-        style={color ? { color: color } : {}}
-      >
-        {children}
-        <ArrowNorthEast
-          className="w-3.5 h-3.5 transition-colors group-hover:text-primary-700"
-          style={color ? { color: color, fill: color } : {}}
-        />
-      </span>
-    </a>
-  )
-}
+      {children}
+      <ArrowNorthEast
+        className="w-3.5 h-3.5 transition-colors group-hover:text-primary-700"
+        style={color ? { color: color, fill: color } : {}}
+      />
+    </span>
+  </a>
+)
 
 export const InternalLink = ({
   href = '',
@@ -66,15 +64,13 @@ export const InternalLink = ({
   color,
   style,
   ...props
-}: Readonly<PropsWithChildren<LinkProps>>) => {
-  return (
-    <NextLink
-      href={href}
-      className={cx(LinkVariants({ variant }), props.className)}
-      style={color ? { color: color, ...style } : style}
-      {...props}
-    >
-      {children}
-    </NextLink>
-  )
-}
+}: Readonly<PropsWithChildren<LinkProps>>) => (
+  <NextLink
+    href={href}
+    className={cx(LinkVariants({ variant }), props.className)}
+    style={color ? { color: color, ...style } : style}
+    {...props}
+  >
+    {children}
+  </NextLink>
+)

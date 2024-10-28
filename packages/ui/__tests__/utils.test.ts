@@ -1,7 +1,5 @@
 describe('Component', () => {
-    it('should render correctly', () => {
-      expect(true).toBe(true);
-    });
-  });
-  
-  
+  it('should render correctly', () => {
+    expect(true).toBe(true)
+  })
+})
