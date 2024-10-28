@@ -8,7 +8,7 @@
     "dev": "sanity dev",
     "start": "sanity start",
     "lint": "eslint --fix ",
-    "build": "sanity build",
+    "build": "sanity build --no-auto-update", 
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy"
   },
@@ -16,10 +16,10 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.61.0",
+    "@sanity/vision": "3.62.2",
+    "sanity": "3.62.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sanity": "^3.61.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
