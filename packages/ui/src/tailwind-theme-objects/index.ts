@@ -4,3 +4,4 @@ export * from './boxShadows';
 export * from './colors';
 export * from './font';
 export * from './breakpoints';
+export * from './container';
