@@ -1,11 +1,7 @@
 import React from 'react'
 import { ButtonProps } from './Button.types'
 
-export function Button({
-  label,
-  backgroundColor,
-  children
-}: ButtonProps) {
+export function Button({ label, backgroundColor, children }: ButtonProps) {
   const style = {
     backgroundColor,
     border: 'none'

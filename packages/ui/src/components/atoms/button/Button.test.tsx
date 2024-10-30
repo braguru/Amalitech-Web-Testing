@@ -5,11 +5,11 @@ import { Button } from './Button'
 
 describe('Button Component', () => {
   test('renders with the correct label', () => {
-    const textContent = "Click Me"
+    const textContent = 'Click Me'
     render(<Button label={textContent} backgroundColor="#1ecbe1" />)
 
     const buttonElement = screen.getByRole('button')
-    expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement).toBeInTheDocument()
     expect(buttonElement).toHaveTextContent(textContent)
   })
 })

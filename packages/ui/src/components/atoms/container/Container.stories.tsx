@@ -8,7 +8,7 @@ import {
 import { ContainerType } from './Container.types'
 import { Container } from './Container'
 
-type StoryProps = ComponentProps<typeof Container>;
+type StoryProps = ComponentProps<typeof Container>
 
 const meta: Meta<StoryProps> = {
   title: 'UI Components/Container',

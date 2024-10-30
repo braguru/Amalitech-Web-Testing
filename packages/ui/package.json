@@ -11,6 +11,8 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "generate:component": "turbo gen react-component",
+    "format": "prettier --check **/*.{ts,tsx,json}",
+    "format:fix": "prettier --write **/*.{ts,tsx,json}",
     "test": "jest",
     "test:watch": "jest"
   },

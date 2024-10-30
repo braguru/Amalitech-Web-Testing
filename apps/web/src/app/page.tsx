@@ -27,7 +27,7 @@ const Gradient = ({
   )
 }
 
-const RootPage = ({ params }: { params: { forTest?: boolean } }) => {
+const RootPage = () => {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -42,7 +42,6 @@ const RootPage = ({ params }: { params: { forTest?: boolean } }) => {
               Hello, Tailwind CSS!
             </div>
             By{' '}
-            <label></label>
             <Image
               alt="Vercel Logo"
               className={styles.vercelLogo}
@@ -84,7 +83,6 @@ const RootPage = ({ params }: { params: { forTest?: boolean } }) => {
               />
             </div>
           </div>
-           <img src=""  />
           <Gradient className={styles.backgroundGradient} conic />
 
           <div className={styles.turborepoWordmarkContainer}>

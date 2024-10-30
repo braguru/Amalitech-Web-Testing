@@ -11,9 +11,9 @@ export const colors = {
     '800': 'var(--primary-800)',
     '900': 'var(--primary-900)',
     '1000': 'var(--primary-1000)',
-    'subtle': 'var(--primary-200)'
+    subtle: 'var(--primary-200)'
   },
-  "primary-alt": {
+  'primary-alt': {
     DEFAULT: 'var(--primary-alt)',
     '100': 'var(--primary-alt-100)',
     '200': 'var(--primary-alt-200)',
@@ -25,7 +25,7 @@ export const colors = {
     '800': 'var(--primary-alt-800)',
     '900': 'var(--primary-alt-900)',
     '1000': 'var(--primary-alt-1000)',
-    'subtle': 'var(--primary-alt-600)'
+    subtle: 'var(--primary-alt-600)'
   },
   neutral: {
     DEFAULT: 'var(--neutrals-600)',
@@ -52,7 +52,7 @@ export const colors = {
     '800': 'var(--secondary-800)',
     '900': 'var(--secondary-900)',
     '1000': 'var(--secondary-1000)',
-    'subtle': 'var(--secondary-200)'
+    subtle: 'var(--secondary-200)'
   },
   accent: {
     DEFAULT: 'var(--accent)',
@@ -66,9 +66,9 @@ export const colors = {
     '800': 'var(--accent-800)',
     '900': 'var(--accent-900)',
     '1000': 'var(--accent-1000)',
-    'subtle': 'var(--accent-200)'
+    subtle: 'var(--accent-200)'
   },
-  "accent-alt": {
+  'accent-alt': {
     DEFAULT: 'var(--accent-alt)',
     '100': 'var(--accent-alt-100)',
     '200': 'var(--accent-alt-200)',
@@ -80,7 +80,7 @@ export const colors = {
     '800': 'var(--accent-alt-800)',
     '900': 'var(--accent-alt-900)',
     '1000': 'var(--accent-alt-1000)',
-    'subtle': 'var(--accent-alt-100)'
+    subtle: 'var(--accent-alt-100)'
   },
   green: {
     DEFAULT: 'var(--green)',
@@ -96,7 +96,7 @@ export const colors = {
     '1000': 'var(--green-1000)'
   },
   success: {
-    DEFAULT: "var(--green-500)"
+    DEFAULT: 'var(--green-500)'
   },
   red: {
     DEFAULT: 'var(--red)',
@@ -112,6 +112,6 @@ export const colors = {
     '1000': 'var(--red-1000)'
   },
   error: {
-    DEFAULT: "var(--red-600)"
-  },
-} as const;
+    DEFAULT: 'var(--red-600)'
+  }
+} as const

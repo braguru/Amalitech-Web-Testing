@@ -1,5 +1,13 @@
-import { spacing, borderRadius, boxShadow, container , colors, fonts, breakpoints } from "../tailwind-theme-objects";
-import { CustomThemeConfig } from "tailwindcss/types/config";
+import {
+  spacing,
+  borderRadius,
+  boxShadow,
+  container,
+  colors,
+  fonts,
+  breakpoints
+} from '../tailwind-theme-objects'
+import { CustomThemeConfig } from 'tailwindcss/types/config'
 
 export const generateTailwindConfigTheme = () => {
   const theme:

@@ -14,7 +14,7 @@ export const base = {
     }
   },
   rules: {
-    "arrow-body-style": ["error", "as-needed"],
+   "arrow-body-style":["error",'as-needed'],
     "newline-before-return": "error",
     'spaced-comment': ['error', 'always', { markers: ['/'] }],
     'no-irregular-whitespace': 'off',
@@ -32,6 +32,7 @@ export const base = {
         max: 1
       }
     ],
-    'no-console': 'error'
+    'no-console': 'error',
+    "quotes": ["error", "single", { "avoidEscape": true }]
   }
 }

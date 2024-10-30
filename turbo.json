@@ -23,6 +23,8 @@
     },
     "lint": {},
     "lint:fix": {},
+    "format": {},
+    "format:fix": {},
     "test": {},
     "test:watch": {
       "cache": false, 

@@ -1,4 +1,5 @@
 /** @type {import("prettier").Config} */
+
 module.exports = {
-  ...require('@amt-web/eslint-config/prettier-base')
+  ...require('../eslint-config/prettier-base')
 };

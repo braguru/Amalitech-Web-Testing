@@ -1,10 +1,10 @@
-import type { Config } from 'jest';
-import baseConfig from '../../jest.config';
+import type { Config } from 'jest'
+import baseConfig from '../../jest.config'
 
-const config:Config = {
+const config: Config = {
   ...baseConfig,
   displayName: 'web',
-  rootDir: './',
-};
+  rootDir: './'
+}
 
-export default config;
+export default config

@@ -1,8 +1,7 @@
-import {ButtonHTMLAttributes} from "react";
+import { ButtonHTMLAttributes } from 'react'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;
-  backgroundColor: string;
-  size?: "sm" | "md" | "lg";
-
+  label: string
+  backgroundColor: string
+  size?: 'sm' | 'md' | 'lg'
 }

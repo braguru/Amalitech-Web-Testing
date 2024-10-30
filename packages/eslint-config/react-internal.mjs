@@ -13,6 +13,8 @@ export const reactInternal = {
     }
   },
   rules: {
+   '@typescript-eslint/explicit-function-return-type': 'error',
+
     // Accessibility rules
     'jsx-a11y/no-interactive-element-to-noninteractive-role': 'error',
     'jsx-a11y/anchor-is-valid': 'warn',
