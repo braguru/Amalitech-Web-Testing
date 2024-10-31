@@ -1,21 +1,22 @@
 import type { Config } from 'jest';
 
 const config: Config = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  testMatch: [
-    '**/?(*.)+(spec|test).[tj]s?(x)',
-  ],
-  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/'],
+  rootDir: './',
+  verbose: true,
+  testEnvironment: 'jsdom', 
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  moduleNameMapper: {
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy', 
+  },
+  collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov'],
-  moduleNameMapper: {
-    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
-  },
+  testMatch: [
+    '**/__tests__/**/*.(test|spec).(ts|tsx)',
+    '**/?(*.)+(spec|test).(ts|tsx)',
+  ],
 };
 
 export default config;

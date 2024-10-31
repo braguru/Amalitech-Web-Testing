@@ -13,7 +13,7 @@ import eslint from '@eslint/js'
 
 export default tseslint.config(
   {
-    files: ['app/**/*.{ts,tsx}'],
+    files: ['app/**/*.{ts,tsx}', 'app/*.{ts,tsx}'],
     plugins: {
       ['@typescript-eslint']: tseslint.plugin,
       ['import']: importPlugin,
@@ -28,7 +28,7 @@ export default tseslint.config(
     prettierConfig,
   
   {
-    ignores: ['.next', '.prettierrc.js', '*.config.*']
+    ignores: ['.next', '.prettierrc.js', '*.config.*', 'coverage/*']
   },
 
   // @ts-ignore
