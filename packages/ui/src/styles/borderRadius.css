@@ -1,11 +1,11 @@
 :root {
-  --sharp: 0rem;
-  --xxs: 0.125rem;
-  --xs: 0.25rem;
-  --sm: 0.5rem;
-  --md: 0.75rem;
-  --lg: 1rem;
-  --xl: 1.5rem;
-  --xxl: 2.5rem;
-  --round: 62.4375rem;
+  --round-sharp: 0rem;
+  --round-xxs: 0.125rem;
+  --round-xs: 0.25rem;
+  --round-sm: 0.5rem;
+  --round-md: 0.75rem;
+  --round-lg: 1rem;
+  --round-xl: 1.5rem;
+  --round-xxl: 2.5rem;
+  --round-full: 62.4375rem;
 }

@@ -25,9 +25,10 @@ const meta: Meta<StoryProps> = {
     label: { control: 'text', description: 'The button label' },
     backgroundColor: { control: 'color', description: 'For custom buttons' },
     size: {
-      control: { type: 'radio', options: ['sm', 'md', 'lg'] },
+      control: 'radio',
+      options: ['base', 'xxs', 'sm', 'md', 'lg', '2xl', '3xl'],
       description: 'How large a can be',
-      table: { type: { summary: 'small | medium | large' } }
+      table: { type: { summary: 'small | medium | large | extraLarge' } }
     }
   }
 }

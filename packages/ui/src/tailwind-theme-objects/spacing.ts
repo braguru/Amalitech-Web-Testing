@@ -6,6 +6,6 @@ export const spacing = {
   md: 'var(--md)',
   lg: 'var(--lg)',
   xl: 'var(--xl)',
-  xxl: 'var(--xxl)',
-  xxxl: 'var(--xxxl)'
+  '2xl': 'var(--xxl)',
+  '3xl': 'var(--xxxl)'
 }

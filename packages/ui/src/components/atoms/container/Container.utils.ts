@@ -8,8 +8,8 @@ export const gaps = {
   12: 'md',
   16: 'lg',
   24: 'xl',
-  32: 'xxl',
-  48: 'xxxl'
+  32: '2xl',
+  48: '3xl'
 }
 
 export const getMarginBottom = (gap: GapsType): string => gaps[`${gap}`]
@@ -56,7 +56,7 @@ export const getFlattenedColors = <T extends Record<string, unknown>>(
     {} as Record<string, string>
   )
 
-export const getThemeColor = (color = '') => {
+export const getThemeColor = (color = ''):string => {
   const themeColors = getFlattenedColors(colors)
 
   return themeColors[color] ?? color

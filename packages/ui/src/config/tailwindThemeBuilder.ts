@@ -9,7 +9,7 @@ import {
 } from '../tailwind-theme-objects'
 import { CustomThemeConfig } from 'tailwindcss/types/config'
 
-export const generateTailwindConfigTheme = () => {
+export const generateTailwindConfigTheme = (): Partial<CustomThemeConfig & { extend: Partial<CustomThemeConfig> }> => {
   const theme:
     | Partial<
         CustomThemeConfig & {

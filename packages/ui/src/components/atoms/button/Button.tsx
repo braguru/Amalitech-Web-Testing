@@ -1,7 +1,11 @@
 import React from 'react'
 import { ButtonProps } from './Button.types'
 
-export function Button({ label, backgroundColor, children }: ButtonProps) {
+export function Button({
+  label,
+  backgroundColor,
+  children
+}: ButtonProps): React.ReactElement {
   const style = {
     backgroundColor,
     border: 'none'
@@ -10,7 +14,7 @@ export function Button({ label, backgroundColor, children }: ButtonProps) {
   return (
     <button
       style={style}
-      className="bg-primary-600 rounded-round p-lg shadow-xxl"
+      className='p-2xl shadow-3xl bg-primary-500  rounded-full'
     >
       {children ? children : label}
     </button>

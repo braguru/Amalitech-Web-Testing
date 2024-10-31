@@ -6,7 +6,7 @@ import {
   getThemeColor
 } from './Container.utils'
 
-export function Container(props: Readonly<PropsWithChildren<ContainerType>>) {
+export function Container(props: Readonly<PropsWithChildren<ContainerType>>):React.ReactElement {
   const {
     children,
     className,
