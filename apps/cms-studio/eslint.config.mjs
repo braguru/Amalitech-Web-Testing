@@ -26,7 +26,7 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ['env.d.ts', 'sanity.cli.ts', 'sanity.config', '*.config.*','**/app.js'],
+    ignores: ['env.d.ts', 'sanity.cli.ts', 'sanity.config', '*.config.*','**/app.js', 'dist/**'],
   },
   base,
   reactInternal,
