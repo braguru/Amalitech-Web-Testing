@@ -1,7 +1,7 @@
 @import './styles/borderRadius.css';
 @import './styles/boxShadows.css';
 @import './styles/spacing.css';
-@import "./styles/colors.css";
+@import './styles/colors.css';
 
 @tailwind base;
 @tailwind components;
@@ -9,4 +9,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  padding: 0;
+}
+.sb-show-main.sb-main-padded {
+  padding: 0;
 }

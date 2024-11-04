@@ -1,40 +1,57 @@
 import React, { PropsWithChildren } from 'react'
+import { cva, cx } from 'class-variance-authority'
 import { ContainerType } from './Container.types'
-import {
-  checkColorValidity,
-  getMarginBottom,
-  getThemeColor
-} from './Container.utils'
 
-export function Container(props: Readonly<PropsWithChildren<ContainerType>>):React.ReactElement {
-  const {
-    children,
-    className,
-    background,
-    gap = 8,
-    fluid = false,
-    ...otherProps
-  } = props
+const ContainerVariants = cva('', {
+  variants: {
+    background: {
+      primary: 'bg-primary',
+      'primary-alt': 'bg-primary-alt',
+      secondary: 'bg-secondary',
+      accent: 'bg-accent',
+      'accent-alt': 'bg-accent-alt'
+    },
+    fluid: {
+      true: 'w-full',
+      false: 'xs:mx-4 sm:!mx-5 md:!mx-6 lg:!mx-10'
+    },
+    gap: {
+      1: 'mb-xxs',
+      2: 'mb-xs',
+      8: 'mb-sm',
+      12: 'mb-md',
+      16: 'mb-lg',
+      24: 'mb-xl',
+      32: 'mb-2xl',
+      48: 'mb-3xl'
+    }
+  },
+  defaultVariants: {
+    gap: 8,
+    fluid: false
+  }
+})
 
-  const marginBottom = `mb-${getMarginBottom(gap)}`
-
-  const containerColor = getThemeColor(
-    typeof background === 'string' ? background : undefined
-  )
-  const bgColor = checkColorValidity(containerColor)
-    ? containerColor
-    : undefined
-
-  return (
-    <section
-      aria-label={otherProps['aria-label'] ?? 'container'}
-      className={`${marginBottom} ${fluid ? 'w-full' : 'container'}${className ?? ''}`}
-      style={{
-        ...(bgColor ? { backgroundColor: bgColor } : {})
-      }}
-      {...otherProps}
-    >
-      {children}
-    </section>
-  )
-}
+export const Container = ({
+  children,
+  className,
+  background,
+  gap,
+  fluid,
+  ...props
+}: PropsWithChildren<ContainerType>): React.ReactElement => (
+  <section
+    aria-label={props['aria-label'] ?? 'container'}
+    className={cx(
+      ContainerVariants({
+        background,
+        gap,
+        fluid
+      }),
+      className
+    )}
+    {...props}
+  >
+    {children}
+  </section>
+)

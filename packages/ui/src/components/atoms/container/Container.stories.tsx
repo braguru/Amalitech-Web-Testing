@@ -7,10 +7,8 @@ import {
 } from './Container.mock'
 import { ContainerType } from './Container.types'
 import { Container } from './Container'
-
-type StoryProps = ComponentProps<typeof Container>
-
-const meta: Meta<StoryProps> = {
+ 
+const meta: Meta<ComponentProps<typeof Container>> = {
   title: 'UI Components/Container',
   tags: ['autodocs'],
   argTypes: {
@@ -37,12 +35,10 @@ const meta: Meta<StoryProps> = {
 
 export default meta
 
-type Story = StoryObj<typeof Container>
-
-export const Default: Story = {
+export const ContainerStory: StoryObj<typeof Container> = {
   args: defaultContainer,
   render: (args: ContainerType) => (
-    <Container gap={12} {...args}>
+    <Container gap={2} {...args}>
       <div className="relative overflow-hidden w-[100%] h-80 text-white flex items-center justify-center">
         <p className="text-xl">General Team Expansion</p>
         <div className="absolute w-20 h-20 -top-4  -right-8 bg-slate-950 border-8 border-white rounded-full"></div>
@@ -51,16 +47,16 @@ export const Default: Story = {
   )
 }
 
-export const Fluid: Story = {
-  ...Default,
+export const Fluid: StoryObj<typeof Container> = {
+  ...ContainerStory,
   args: fluidContainer
 }
 
-export const backgroundColor: Story = {
+export const backgroundColor: StoryObj<typeof Container> = {
   args: backgroundContainer,
   render: (args) => (
     <Container {...args}>
-      <div className="h-80 text-center  flex items-center justify-center">
+      <div className="h-80 text-center flex items-center justify-center">
         <p>Hurray!!</p>
       </div>
     </Container>

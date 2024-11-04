@@ -1,11 +1,11 @@
 import React from 'react'
 import { ButtonProps } from './Button.types'
 
-export function Button({
+export const Button = ({
   label,
   backgroundColor,
   children
-}: ButtonProps): React.ReactElement {
+}: ButtonProps): React.ReactElement => {
   const style = {
     backgroundColor,
     border: 'none'
