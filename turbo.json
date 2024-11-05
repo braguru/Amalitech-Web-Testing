@@ -3,6 +3,13 @@
   "globalDependencies": [
     "**/.env.*local"
   ],
+  "globalEnv": [
+  "SANITY_STUDIO_PROJECT_ID",
+  "SANITY_STUDIO_DATASET",
+  "NEXT_PUBLIC_SANITY_CLIENT_PROJECT_ID",
+  "NEXT_PUBLIC_SANITY_CLIENT_DATASET",
+  "NEXT_PUBLIC_SANITY_API_READ_TOKEN"
+],
   "tasks": {
     "dev": {
       "cache": false,
