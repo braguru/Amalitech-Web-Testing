@@ -5,8 +5,8 @@
     --lh-body-md: 1.125; /* 18px */
     --lh-body-lg: 1.375; /* 22px */
     --lh-body-xl: 1.5; /* 24px */
-    --lh-body-xxl: 1.75; /* 28px */
-    --lh-body-xxxl: 2.25; /* 36px */
+    --lh-body-2xl: 1.75; /* 28px */
+    --lh-body-3xl: 2.25; /* 36px */
 
     /* Heading */
     --lh-headline-xxxs: 1.5; /* 24px */
@@ -16,7 +16,7 @@
     --lh-headline-md: 3.25; /* 52px */
     --lh-headline-lg: 3.75; /* 60px */
     --lh-headline-xl: 4.25; /* 68px */
-    --lh-headline-xxl: 5; /* 80px */
-    --lh-headline-xxxl: 7.25; /*  116px*/
-    --lh-headline-xxxxl: 7.5; /*  120px*/
+    --lh-headline-2xl: 5; /* 80px */
+    --lh-headline-3xl: 7.25; /*  116px*/
+    --lh-headline-4xl: 7.5; /*  120px*/
 }

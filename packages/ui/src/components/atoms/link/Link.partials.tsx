@@ -35,7 +35,7 @@ export const ExternalLink = ({
   style,
   variant,
   ...props
-}: Readonly<PropsWithChildren<LinkProps>>):React.ReactElement => (
+}: Readonly<PropsWithChildren<LinkProps>>): React.ReactElement => (
   <a
     href={href}
     target={target}
@@ -64,7 +64,7 @@ export const InternalLink = ({
   color,
   style,
   ...props
-}: Readonly<PropsWithChildren<LinkProps>>):React.ReactElement => (
+}: Readonly<PropsWithChildren<LinkProps>>): React.ReactElement => (
   <NextLink
     href={href}
     className={cx(LinkVariants({ variant }), props.className)}

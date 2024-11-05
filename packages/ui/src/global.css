@@ -2,9 +2,9 @@
 @import './styles/boxShadows.css';
 @import './styles/spacing.css';
 @import './styles/colors.css';
-@import './styles/gap.css';
 @import './styles/lineHeight.css';
 @import './styles/textSize.css';
+@import './styles/gap.css';
 
 @tailwind base;
 @tailwind components;

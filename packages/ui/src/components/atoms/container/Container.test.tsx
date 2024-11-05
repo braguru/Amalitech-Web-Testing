@@ -11,7 +11,7 @@ describe('Container Component', () => {
       </Container>
     )
 
-    const childElement = screen.getByText('Hello');
-    expect(childElement).toBeInTheDocument();
+    const childElement = screen.getByText('Hello')
+    expect(childElement).toBeInTheDocument()
   })
 })

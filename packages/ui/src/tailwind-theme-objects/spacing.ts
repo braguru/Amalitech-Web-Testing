@@ -1,11 +1,11 @@
 export const spacing = {
   base: 'var(--base)',
-  xxs: 'var(--xxs)',
+  '2xs': 'var(--2xs)',
   xs: 'var(--xs)',
   sm: 'var(--sm)',
   md: 'var(--md)',
   lg: 'var(--lg)',
   xl: 'var(--xl)',
-  '2xl': 'var(--xxl)',
-  '3xl': 'var(--xxxl)'
+  '2xl': 'var(--2xl)',
+  '3xl': 'var(--3xl)'
 }

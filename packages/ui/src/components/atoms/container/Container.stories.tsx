@@ -7,7 +7,7 @@ import {
 } from './Container.mock'
 import { ContainerType } from './Container.types'
 import { Container } from './Container'
- 
+
 const meta: Meta<ComponentProps<typeof Container>> = {
   title: 'UI Components/Container',
   tags: ['autodocs'],

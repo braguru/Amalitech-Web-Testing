@@ -1,3 +1,4 @@
-import { VariantProps } from 'class-variance-authority';
+import { VariantProps } from 'class-variance-authority'
 
-export type CVAVariantProps<T extends (...args: []) => unknown> = VariantProps<T>;
+export type CVAVariantProps<T extends (...args: []) => unknown> =
+  VariantProps<T>

@@ -19,7 +19,11 @@ const meta: Meta<ComponentProps<typeof Row>> = {
     gap: {
       control: 'number',
       description: 'Gaps between elements in the container',
-      table: { type: { summary: '0 | 2 | 4 | 6 | 8 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56' } }
+      table: {
+        type: {
+          summary: '0 | 2 | 4 | 6 | 8 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56'
+        }
+      }
     },
     cols: {
       control: 'number',

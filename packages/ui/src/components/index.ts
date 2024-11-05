@@ -7,3 +7,4 @@ export * from './atoms/row/Row'
 // type
 export * from './atoms/button/Button.types'
 export * from './atoms/link/Link.type'
+export * from './atoms/headline/Headline.types'
