@@ -5,6 +5,7 @@ import {
   colors,
   container,
   fonts,
+  gaps,
   fontSize,
   lineHeight,
   spacing
@@ -20,6 +21,7 @@ export const generateTailwindConfigTheme = (): Partial<CustomThemeConfig & { ext
       colors,
       screens: breakpoints,
       fontFamily: fonts,
+      gap: gaps,
       lineHeight,
       fontSize
     }
