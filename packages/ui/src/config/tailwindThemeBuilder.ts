@@ -1,33 +1,26 @@
 import {
-  spacing,
   borderRadius,
   boxShadow,
-  container,
+  breakpoints,
   colors,
+  container,
   fonts,
-  breakpoints
+  fontSize,
+  lineHeight,
+  spacing
 } from '../tailwind-theme-objects'
-import { CustomThemeConfig } from 'tailwindcss/types/config'
+import {CustomThemeConfig} from 'tailwindcss/types/config'
 
-export const generateTailwindConfigTheme = (): Partial<CustomThemeConfig & { extend: Partial<CustomThemeConfig> }> => {
-  const theme:
-    | Partial<
-        CustomThemeConfig & {
-          extend: Partial<CustomThemeConfig>
-        }
-      >
-    | undefined = {
+export const generateTailwindConfigTheme = (): Partial<CustomThemeConfig & { extend: Partial<CustomThemeConfig> }> => ({
     extend: {
       spacing,
-      lineHeight: spacing,
       borderRadius,
       boxShadow,
       container,
       colors,
       screens: breakpoints,
-      fontFamily: fonts
+      fontFamily: fonts,
+      lineHeight,
+      fontSize
     }
-  }
-
-  return theme
-}
+  })

@@ -2,6 +2,8 @@
 @import './styles/boxShadows.css';
 @import './styles/spacing.css';
 @import './styles/colors.css';
+@import './styles/lineHeight.css';
+@import './styles/textSize.css';
 
 @tailwind base;
 @tailwind components;
