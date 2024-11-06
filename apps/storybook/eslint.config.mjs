@@ -7,7 +7,7 @@ export default tseslint.config(
   // Default extensions
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  
+
   { ignores: ['**/*.config.*', './.storybook/*'] },
   { files: ['**/*'] },
 

@@ -11,7 +11,8 @@
     "build": "turbo build",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore .",
     "test": "turbo run test --filter=@amt-web/ui --filter=web",
     "test:watch": "turbo run test:watch"
   },

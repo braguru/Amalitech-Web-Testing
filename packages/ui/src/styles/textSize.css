@@ -1,21 +1,21 @@
 :root {
-    /* Body */
-    --ts-body-2xs: 0.75rem; /* 10px */
-    --ts-body-xs: 0.875rem; /* 12px */
-    --ts-body-sm: 1.125rem; /* 14px */
-    --ts-body-md: 1.375rem; /* 16px */
-    --ts-body-lg: 1.5rem; /* 18px */
-    --ts-body-xl: 1.75rem; /* 24px */
-    --ts-body-2xl: 1.75rem; /* 28px */
+  /* Body */
+  --ts-body-2xs: 0.75rem; /* 10px */
+  --ts-body-xs: 0.875rem; /* 12px */
+  --ts-body-sm: 1.125rem; /* 14px */
+  --ts-body-md: 1.375rem; /* 16px */
+  --ts-body-lg: 1.5rem; /* 18px */
+  --ts-body-xl: 1.75rem; /* 24px */
+  --ts-body-2xl: 1.75rem; /* 28px */
 
-    /* Heading */
-    --ts-header-3xs: 1.5rem; /* 20px */
-    --ts-header-2xs: 1.75rem; /* 24px */
-    --ts-header-xs: 2.5rem; /* 32px */
-    --ts-header-sm: 3rem; /* 40px */
-    --ts-header-md: 3.25rem; /* 48px */
-    --ts-header-lg: 3.75rem; /* 56px */
-    --ts-header-xl: 4.25rem; /* 64px */
-    --ts-header-2xl: 5rem; /* 96px */
-    --ts-header-3xl: 7.25rem; /*  144px*/
+  /* Heading */
+  --ts-header-3xs: 1.5rem; /* 20px */
+  --ts-header-2xs: 1.75rem; /* 24px */
+  --ts-header-xs: 2.5rem; /* 32px */
+  --ts-header-sm: 3rem; /* 40px */
+  --ts-header-md: 3.25rem; /* 48px */
+  --ts-header-lg: 3.75rem; /* 56px */
+  --ts-header-xl: 4.25rem; /* 64px */
+  --ts-header-2xl: 5rem; /* 96px */
+  --ts-header-3xl: 7.25rem; /*  144px*/
 }

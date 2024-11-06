@@ -1,26 +1,21 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [
-    "**/.env.*local"
-  ],
+  "globalDependencies": ["**/.env.*local"],
   "globalEnv": [
-  "SANITY_STUDIO_PROJECT_ID",
-  "SANITY_STUDIO_DATASET",
-  "NEXT_PUBLIC_SANITY_CLIENT_PROJECT_ID",
-  "NEXT_PUBLIC_SANITY_CLIENT_DATASET",
-  "NEXT_PUBLIC_SANITY_API_READ_TOKEN"
-],
+    "SANITY_STUDIO_PROJECT_ID",
+    "SANITY_STUDIO_DATASET",
+    "NEXT_PUBLIC_SANITY_CLIENT_PROJECT_ID",
+    "NEXT_PUBLIC_SANITY_CLIENT_DATASET",
+    "NEXT_PUBLIC_SANITY_API_READ_TOKEN"
+  ],
   "tasks": {
     "dev": {
       "cache": false,
       "persistent": true
     },
     "build": {
-      "dependsOn": [
-        "^build",
-        "^test"
-      ],
-     "inputs": ["$TURBO_DEFAULT$", "!**/*.stories.{tsx,jsx,mdx}"],
+      "dependsOn": ["^build", "^test"],
+      "inputs": ["$TURBO_DEFAULT$", "!**/*.stories.{tsx,jsx,mdx}"],
       "outputs": [
         ".next/**",
         "!.next/cache/**",
@@ -34,11 +29,11 @@
     "format:fix": {},
     "test": {},
     "test:watch": {
-      "cache": false, 
+      "cache": false,
       "persistent": true
     },
     "build:storybook": {},
     "cms:dev": {},
     "ui": {}
   }
-  }
+}

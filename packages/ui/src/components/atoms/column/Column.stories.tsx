@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import Column from './Column'
 import Row from '../row/Row'
 
-const acceptedValue = ' 0 | 1 | 2 | 3 | 4 | 5| 6 | 7 | 8 | 9 | 10 | 11 | 12';
+const acceptedValue = ' 0 | 1 | 2 | 3 | 4 | 5| 6 | 7 | 8 | 9 | 10 | 11 | 12'
 
 const meta: Meta<ComponentProps<typeof Column>> = {
   title: 'UI Components/Column',
@@ -98,7 +98,7 @@ export const ColumnStory: StoryObj<typeof Column> = {
     <Row className="grid grid-cols-12 gap-4">
       <Column
         {...args}
-        background='accent'
+        background="accent"
         className="w-full h-40 rounded-lg  flex items-center justify-center"
       >
         1
@@ -106,14 +106,14 @@ export const ColumnStory: StoryObj<typeof Column> = {
       <Column
         {...args}
         className=" w-full h-40 rounded-lg  flex items-center justify-center"
-        background='primary'
+        background="primary"
       >
         2
       </Column>
       <Column
         {...args}
         className=" w-full h-40 rounded-lg flex items-center justify-center"
-        background='primary-alt'
+        background="primary-alt"
       >
         3
       </Column>

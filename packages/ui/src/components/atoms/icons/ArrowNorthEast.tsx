@@ -1,5 +1,5 @@
 import React from 'react'
-import { cn } from 'src/shared/utils'
+import { cn } from '../../../shared/utils'
 
 type ArrowNorthEastProps = {
   className?: string
@@ -8,7 +8,7 @@ type ArrowNorthEastProps = {
 
 export const ArrowNorthEast = ({
   className,
-  style,
+  style
 }: ArrowNorthEastProps): React.ReactElement => (
   <svg
     className={cn('text-primary', className)}

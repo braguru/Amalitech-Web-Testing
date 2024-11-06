@@ -1,3 +1,4 @@
+import { CustomThemeConfig } from 'tailwindcss/types/config'
 import {
   borderRadius,
   boxShadow,
@@ -7,10 +8,8 @@ import {
   fonts,
   fontSize,
   lineHeight,
-  spacing,
-  gaps
+  spacing
 } from '../tailwind-theme-objects'
-import { CustomThemeConfig } from 'tailwindcss/types/config'
 
 export const generateTailwindConfigTheme = (): Partial<
   CustomThemeConfig & { extend: Partial<CustomThemeConfig> }

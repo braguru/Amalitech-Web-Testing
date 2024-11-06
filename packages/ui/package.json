@@ -11,10 +11,10 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "generate:component": "turbo gen react-component",
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --coverage",
     "test:watch": "jest --watch",
-    "format": "prettier --check **/*.{ts,tsx,json}",
-    "format:fix": "prettier --write **/*.{ts,tsx,json}"
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "devDependencies": {
     "@amt-web/typescript-config": "*",

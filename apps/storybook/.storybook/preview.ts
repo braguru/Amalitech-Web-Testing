@@ -1,26 +1,25 @@
 import type { Preview } from '@storybook/react'
-import {  withThemeByDataAttribute } from '@storybook/addon-themes';
+import { withThemeByDataAttribute } from '@storybook/addon-themes'
 import '../../../packages/ui/src/global.css'
-
 
 const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
+        date: /Date$/i
+      }
+    }
   },
   decorators: [
     withThemeByDataAttribute({
       themes: {
         light: 'light',
-        dark: 'dark',
+        dark: 'dark'
       },
       defaultTheme: 'light',
-      attributeName: 'data-mode',
-    }),
+      attributeName: 'data-mode'
+    })
   ]
 }
 

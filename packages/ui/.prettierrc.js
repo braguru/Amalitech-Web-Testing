@@ -2,4 +2,4 @@
 
 module.exports = {
   ...require('../eslint-config/prettier-base')
-};
+}

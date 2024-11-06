@@ -1,4 +1,4 @@
-import globals from 'globals';
+import globals from 'globals'
 
 export const base = {
   languageOptions: {
@@ -7,15 +7,13 @@ export const base = {
     },
     parserOptions: {
       allowAutomaticSingleRunInference: true,
-      project: [
-        './*/tsconfig.json'
-      ],
+      project: ['./*/tsconfig.json'],
       tsconfigRootDir: import.meta.dirname
     }
   },
   rules: {
-   "arrow-body-style":["error",'as-needed'],
-    "newline-before-return": "error",
+    'arrow-body-style': ['error', 'as-needed'],
+    'newline-before-return': 'error',
     'spaced-comment': ['error', 'always', { markers: ['/'] }],
     'no-irregular-whitespace': 'off',
     'padded-blocks': [
@@ -33,6 +31,6 @@ export const base = {
       }
     ],
     'no-console': 'error',
-    "quotes": ["error", "single", { "avoidEscape": true }]
+    quotes: ['error', 'single', { avoidEscape: true }]
   }
 }

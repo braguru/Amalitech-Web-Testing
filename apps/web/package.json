@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings 0",
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --coverage",
     "test:watch": "jest --watch --passWithNoTests",
-    "format": "prettier --check **/*.{ts,tsx,json}",
-    "format:fix": "prettier --write **/*.{ts,tsx,json}"
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@amt-web/ui": "*",

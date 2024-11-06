@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 import React, { PropsWithChildren } from 'react'
-import { cn } from 'src/shared/utils'
+import { cn } from '../../../shared/utils'
 import { ColumnProps } from './Column.types'
 import { columnConfig } from './Column.utils'
 
@@ -11,17 +11,17 @@ export const ColVariants = cva('col-span-full', {
       'primary-alt': 'bg-primary-alt',
       secondary: 'bg-secondary',
       accent: 'bg-accent',
-      'accent-alt': 'bg-accent-alt',
+      'accent-alt': 'bg-accent-alt'
     },
-    ...columnConfig,
+    ...columnConfig
   },
   defaultVariants: {
     sm: 12,
     xs: 12,
     md: 0,
     lg: 0,
-    xl: 0,
-  },
+    xl: 0
+  }
 })
 
 export const Column = ({
@@ -45,9 +45,9 @@ export const Column = ({
         sm,
         lg,
         md,
-        xl,
+        xl
       }),
-      className,
+      className
     )}
     {...props}
   >

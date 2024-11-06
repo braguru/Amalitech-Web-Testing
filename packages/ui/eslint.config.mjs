@@ -31,7 +31,7 @@ export default tseslint.config(
 
   // Files to ignore
   {
-    ignores: ['**/dist/*', '.prettierrc.js', '*.config.*','coverage/*']
+    ignores: ['**/dist/*', '.prettierrc.js', '*.config.*', 'coverage/*']
   },
 
   // Base config

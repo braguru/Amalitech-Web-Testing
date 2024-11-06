@@ -22,11 +22,11 @@ export default tseslint.config(
       ['testing-library']: tlPlugin
     }
   },
-    // Default extensions
-    eslint.configs.recommended,
-    ...tseslint.configs.recommended,
-    prettierConfig,
-  
+  // Default extensions
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  prettierConfig,
+
   {
     ignores: ['.next', '.prettierrc.js', '*.config.*', 'coverage/*']
   },
