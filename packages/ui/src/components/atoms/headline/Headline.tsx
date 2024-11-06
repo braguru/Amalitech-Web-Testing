@@ -1,7 +1,8 @@
-import React from 'react'
-import { HeadlineProps } from './Headline.types'
-import { DynamicHeading } from './DynamicHeading'
 import { cva } from 'class-variance-authority'
+import React from 'react'
+import { cn } from 'src/shared/utils'
+import { DynamicHeading } from './DynamicHeading'
+import { HeadlineProps } from './Headline.types'
 
 export const Headline = ({
   level,
@@ -16,26 +17,26 @@ export const Headline = ({
     variants: {
       level: {
         1: [
-          'text-body-2xl leading-lh-headline-xs md:text-heading-lg lh-headline-xl '
+          'text-body-2xl leading-lh-headline-xs md:text-heading-lg lh-headline-xl ',
         ],
         2: [
-          'text-body-xl leading-lh-headline-xxs md:text-heading-md lh-headline-lg'
+          'text-body-xl leading-lh-headline-xxs md:text-heading-md lh-headline-lg',
         ],
         3: ['text-heading-3xs md:text-heading-sm'],
         4: ['text-body-lg leading-lh-headline-3xs md:text-heading-xs'],
         5: ['text-body-md leading-lh-body-lg md:text-heading-xxs lh-body-3xl'],
-        6: ['text-body-sm leading-lh-body-md md:text-body-lg lh-headline-2xs']
+        6: ['text-body-sm leading-lh-body-md md:text-body-lg lh-headline-2xs'],
       },
       as: {
         'display-1': 'text-heading-md md:text-heading-3xl lh-headline-4xl ',
         'display-2': 'text-heading-sm md:text-heading-xxl lh-headline-3xl ',
-        'display-3': 'text-heading-xs md:text-heading-xl lh-headline-2xl '
-      }
+        'display-3': 'text-heading-xs md:text-heading-xl lh-headline-2xl ',
+      },
     },
     defaultVariants: {
       level: 2,
-      as: undefined
-    }
+      as: undefined,
+    },
   })
   const headingCheck = level > 0 && level < 7 ? level : 2
 
@@ -43,7 +44,7 @@ export const Headline = ({
     <DynamicHeading
       level={headingCheck}
       style={style}
-      className={`${headlineVariants({ level: headingCheck, as })} ${className}`}
+      className={cn(headlineVariants({ level: headingCheck, as }), className)}
       {...props}
     >
       {children}

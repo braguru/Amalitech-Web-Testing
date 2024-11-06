@@ -1,6 +1,7 @@
+import { cva } from 'class-variance-authority'
 import React, { PropsWithChildren } from 'react'
+import { cn } from 'src/shared/utils'
 import { RowProps } from './Row.types'
-import { cva, cx } from 'class-variance-authority'
 
 export const RowVariants = cva('grid', {
   variants: {
@@ -9,7 +10,7 @@ export const RowVariants = cva('grid', {
       'primary-alt': 'bg-primary-alt',
       secondary: 'bg-secondary',
       accent: 'bg-accent',
-      'accent-alt': 'bg-accent-alt'
+      'accent-alt': 'bg-accent-alt',
     },
     cols: {
       1: 'grid-cols-1',
@@ -23,7 +24,7 @@ export const RowVariants = cva('grid', {
       9: 'grid-cols-9',
       10: 'grid-cols-10',
       11: 'grid-cols-11',
-      12: 'grid-cols-12'
+      12: 'grid-cols-12',
     },
     gap: {
       0: 'gap-none',
@@ -38,13 +39,13 @@ export const RowVariants = cva('grid', {
       32: 'gap-3xl',
       40: 'gap-4xl',
       48: 'gap-5xl',
-      56: 'gap-6xl'
-    }
+      56: 'gap-6xl',
+    },
   },
   defaultVariants: {
     gap: 4,
-    cols: 3
-  }
+    cols: 3,
+  },
 })
 
 export const Row = ({
@@ -57,13 +58,13 @@ export const Row = ({
 }: PropsWithChildren<RowProps>): React.ReactElement => (
   <div
     aria-label={Props['aria-label'] ?? 'row-item'}
-    className={cx(
+    className={cn(
       RowVariants({
         background,
         gap,
-        cols
+        cols,
       }),
-      className
+      className,
     )}
     {...Props}
   >

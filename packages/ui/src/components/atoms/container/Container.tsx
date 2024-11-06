@@ -1,5 +1,6 @@
+import { cva } from 'class-variance-authority'
 import React, { PropsWithChildren } from 'react'
-import { cva, cx } from 'class-variance-authority'
+import { cn } from 'src/shared/utils'
 import { ContainerType } from './Container.types'
 
 const ContainerVariants = cva('', {
@@ -9,11 +10,11 @@ const ContainerVariants = cva('', {
       'primary-alt': 'bg-primary-alt',
       secondary: 'bg-secondary',
       accent: 'bg-accent',
-      'accent-alt': 'bg-accent-alt'
+      'accent-alt': 'bg-accent-alt',
     },
     fluid: {
       true: 'w-full',
-      false: 'xs:mx-4 sm:!mx-5 md:!mx-6 lg:!mx-10'
+      false: 'xs:mx-4 sm:!mx-5 md:!mx-6 lg:!mx-10',
     },
     gap: {
       1: 'mb-xxs',
@@ -23,13 +24,13 @@ const ContainerVariants = cva('', {
       16: 'mb-lg',
       24: 'mb-xl',
       32: 'mb-2xl',
-      48: 'mb-3xl'
-    }
+      48: 'mb-3xl',
+    },
   },
   defaultVariants: {
     gap: 8,
-    fluid: false
-  }
+    fluid: false,
+  },
 })
 
 export const Container = ({
@@ -42,13 +43,13 @@ export const Container = ({
 }: PropsWithChildren<ContainerType>): React.ReactElement => (
   <section
     aria-label={props['aria-label'] ?? 'container'}
-    className={cx(
+    className={cn(
       ContainerVariants({
         background,
         gap,
-        fluid
+        fluid,
       }),
-      className
+      className,
     )}
     {...props}
   >
