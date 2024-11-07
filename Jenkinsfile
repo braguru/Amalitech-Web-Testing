@@ -1,3 +1,4 @@
+/* groovylint-disable LineLength, NestedBlockDepth */
 pipeline {
     agent any
     tools {
