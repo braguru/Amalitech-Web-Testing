@@ -1,7 +1,6 @@
 import { HeadlineProps } from './Headline.types'
 import { Meta, StoryObj } from '@storybook/react'
 import { Headline } from './Headline'
-import React from 'react'
 import {
   display1,
   display2,
@@ -13,9 +12,13 @@ import {
   headingLevel5Args,
   headingLevel6Args
 } from './Headline.mock'
+import { TextColorVariants } from '../../../shared/colors.cva'
+
+const textColor = Object.keys(TextColorVariants)
 
 const meta: Meta<HeadlineProps> = {
   title: 'UI Components/Headline',
+  component: Headline,
   tags: ['autodocs'],
   parameters: {
     design: {
@@ -25,34 +28,29 @@ const meta: Meta<HeadlineProps> = {
   },
   argTypes: {
     level: {
-      control: { type: 'select', options: [1, 2, 3, 4, 5, 6] },
+      control: { type: 'select' },
+      options: [1, 2, 3, 4, 5, 6],
       description: 'The heading level',
       table: {
-        type: { summary: '1 | 2 | 3 | 4 | 5 | 6' },
         defaultValue: { summary: '2' }
       }
     },
     color: {
-      control: { type: 'color', defaultValue: '#3e3d3a' },
+      control: { type: 'select' },
+      options: textColor,
       description: 'Color of text',
       table: {
-        type: {
-          summary:
-            'base-black | base-white | base-orange | base-light-blue | base-green | base-yellow | base-red | base-ultra-marine'
-        },
-        defaultValue: { summary: 'base-black' }
+        defaultValue: { summary: 'black' }
       }
     },
     as: {
       control: {
-        type: 'radio',
-        options: ['display-1', 'display-2', 'display-3']
+        type: 'radio'
       },
-      description: 'Applies a display style to the heading',
-      table: { type: { summary: 'display-1 | display-2 | display-3' } }
+      options: ['display-1', 'display-2', 'display-3'],
+      description: 'Applies a display style to the heading'
     },
     children: {
-      control: 'text',
       description: 'The content of the heading'
     }
   }
@@ -62,57 +60,39 @@ export default meta
 
 type Story = StoryObj<HeadlineProps>
 
-const HeadlineStory: Story = {
-  render: (args: HeadlineProps) => <Headline {...args} />
-}
-
 export const HeadingLevel1: Story = {
-  ...HeadlineStory,
-  args: {
-    ...headingLevel1Args
-  }
+  args: headingLevel1Args
 }
 
 export const HeadingLevel2: Story = {
-  ...HeadlineStory,
   args: headingLevel2Args
 }
 
 export const HeadingLevel3: Story = {
-  ...HeadlineStory,
-  args: {
-    ...headingLevel3Args,
-    color: 'blue'
-  }
+  args: headingLevel3Args
 }
 
 export const HeadingLevel4: Story = {
-  ...HeadlineStory,
   args: headingLevel4Args
 }
 
 export const HeadingLevel5: Story = {
-  ...HeadlineStory,
   args: headingLevel5Args
 }
 
 export const HeadingLevel6: Story = {
-  ...HeadlineStory,
   args: headingLevel6Args
 }
 
 // Stories for display styles
 export const Display1: Story = {
-  ...HeadlineStory,
   args: display1
 }
 
 export const Display2: Story = {
-  ...HeadlineStory,
   args: display2
 }
 
 export const Display3: Story = {
-  ...HeadlineStory,
   args: display3
 }

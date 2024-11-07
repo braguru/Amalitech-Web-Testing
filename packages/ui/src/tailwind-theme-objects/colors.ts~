@@ -2,7 +2,7 @@ export const colors = {
   black: {
     DEFAULT: 'var(--base-black)'
   },
-  white: {
+  'base-white': {
     DEFAULT: 'var(--base-white)'
   },
   'light-blue': {
@@ -53,8 +53,7 @@ export const colors = {
     '700': 'var(--neutrals-700)',
     '800': 'var(--neutrals-800)',
     '900': 'var(--neutrals-900)',
-    '1000': 'var(--neutrals-1000)',
-    subtle: 'var(--neutrals-100)'
+    '1000': 'var(--neutrals-1000)'
   },
   secondary: {
     DEFAULT: 'var(--secondary)',

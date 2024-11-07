@@ -5,8 +5,7 @@ import { cn } from '../../../shared/utils'
 export const Button = ({
   label,
   backgroundColor,
-  className,
-  children
+  className
 }: ButtonProps): React.ReactElement => {
   const style = {
     backgroundColor,
@@ -21,7 +20,7 @@ export const Button = ({
         className
       )}
     >
-      {children ? children : label}
+      {label}
     </button>
   )
 }

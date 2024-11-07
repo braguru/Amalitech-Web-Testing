@@ -12,26 +12,27 @@ describe('Headline Component', () => {
     expect(headingElement).toHaveTextContent('This is a heading')
   })
 
-  it('applies the correct display style (display1)', () => {
+  it('applies the correct display style (display-1)', () => {
     render(
       <Headline level={3} as="display-1">
         Styled Heading
       </Headline>
     )
     const headingElement = screen.getByRole('heading', { level: 3 })
-    expect(headingElement).toHaveClass('font-bold text-heading-md')
+    expect(headingElement).toHaveClass('font-bold')
+    expect(headingElement).toHaveClass('md:text-heading-3xl')
     expect(headingElement).toHaveTextContent('Styled Heading')
   })
 
-  // it('renders with default color if no color is provided', () => {
-  //   render(<Headline level={1}>Default Color Heading</Headline>)
-  //   const headingElement = screen.getByRole('heading', { level: 1 })
-  //   expect(headingElement).toHaveClass('text-gray-800')
-  // })
+  it('renders with default color if no color is provided', () => {
+    render(<Headline level={1}>Default Color Heading</Headline>)
+    const headingElement = screen.getByRole('heading', { level: 1 })
+    expect(headingElement).toHaveStyle({ color: 'var(--base-black)' })
+  })
 
   it('renders with custom color if provided', () => {
     render(
-      <Headline level={1} color="primary-500">
+      <Headline level={1} color="black">
         Custom Color Heading
       </Headline>
     )

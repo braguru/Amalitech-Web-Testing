@@ -16,14 +16,14 @@ export const BackgroundVariants = {
 }
 
 export const TextColorVariants = {
-  primary: 'bg-primary',
-  'primary-alt': 'bg-primary-alt',
-  secondary: 'bg-secondary',
-  accent: 'bg-accent',
-  'accent-alt': 'bg-accent-alt',
-  neutral: 'bg-neutral',
-  'base-white': 'bg-white',
-  'base-black': 'bg-black'
+  primary: 'text-primary',
+  'primary-alt': 'text-primary-alt',
+  secondary: 'text-light-blue',
+  accent: 'text-accent',
+  'accent-alt': 'text-marine',
+  neutral: 'text-neutral-800',
+  black: 'text-black',
+  white: 'text-white'
 }
 
 export const InteractiveColorVariants = {

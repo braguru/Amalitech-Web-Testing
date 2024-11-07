@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { HeadlineProps } from './Headline.types'
 
 export const DynamicHeading = ({
   level,
-  children,
   ...props
-}: Partial<HeadlineProps>): React.ReactElement => {
+}: PropsWithChildren<HeadlineProps>): React.ReactElement => {
   const HeadingTag = `h${level}`
 
-  return React.createElement(HeadingTag, props, children)
+  return React.createElement(HeadingTag, props)
 }

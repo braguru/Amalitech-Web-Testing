@@ -1,22 +1,22 @@
 :root {
   /* Body */
-  --lh-body-xs: 0.75; /* 12px */
-  --lh-body-sm: 0.875; /* 14px */
-  --lh-body-md: 1.125; /* 18px */
-  --lh-body-lg: 1.375; /* 22px */
-  --lh-body-xl: 1.5; /* 24px */
-  --lh-body-2xl: 1.75; /* 28px */
-  --lh-body-3xl: 2.25; /* 36px */
+  --lh-body-xs: 120%; /* 12px */
+  --lh-body-sm: 116.667%; /* 14px */
+  --lh-body-md: 128.571%; /* 18px */
+  --lh-body-lg: 137.5%; /* 22px */
+  --lh-body-xl: 133.333%; /* 24px */
+  --lh-body-2xl: 116.667%; /* 28px */
+  --lh-body-3xl: 128.57%; /* 36px */
 
   /* Heading */
-  --lh-headline-xxxs: 1.5; /* 24px */
-  --lh-headline-xxs: 1.75; /* 28px */
-  --lh-headline-xs: 2.5; /* 40px */
-  --lh-headline-sm: 3; /* 48px */
-  --lh-headline-md: 3.25; /* 52px */
-  --lh-headline-lg: 3.75; /* 60px */
-  --lh-headline-xl: 4.25; /* 68px */
-  --lh-headline-2xl: 5; /* 80px */
-  --lh-headline-3xl: 7.25; /*  116px*/
-  --lh-headline-4xl: 7.5; /*  120px*/
+  --lh-headline-3xs: 133.333%; /* 24px */
+  --lh-headline-2xs: 155.556%; /* 28px */
+  --lh-headline-xs: 125%; /* 40px */
+  --lh-headline-sm: 120%; /* 48px */
+  --lh-headline-md: 120%; /* 52px */
+  --lh-headline-lg: 125%; /* 60px */
+  --lh-headline-xl: 121.429%; /* 68px */
+  --lh-headline-2xl: 125%; /* 80px */
+  --lh-headline-3xl: 120.833%; /*  116px*/
+  --lh-headline-4xl: 108.333%; /*  156px*/
 }
