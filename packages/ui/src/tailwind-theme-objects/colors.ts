@@ -38,7 +38,8 @@ export const colors = {
     '700': 'var(--neutrals-700)',
     '800': 'var(--neutrals-800)',
     '900': 'var(--neutrals-900)',
-    '1000': 'var(--neutrals-1000)'
+    '1000': 'var(--neutrals-1000)',
+    subtle: 'var(--neutrals-100)'
   },
   secondary: {
     DEFAULT: 'var(--secondary)',
@@ -113,5 +114,11 @@ export const colors = {
   },
   error: {
     DEFAULT: 'var(--red-600)'
+  },
+  black: {
+    DEFAULT: 'var(--base-black)'
+  },
+  white: {
+    DEFAULT: 'var(--base-white)'
   }
 } as const

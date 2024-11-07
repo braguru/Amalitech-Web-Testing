@@ -2,16 +2,11 @@ import { cva } from 'class-variance-authority'
 import React, { PropsWithChildren } from 'react'
 import { cn } from '../../../shared/utils'
 import { RowProps } from './Row.types'
+import { BackgroundVariants } from 'src/shared/colors.cva'
 
 export const RowVariants = cva('grid', {
   variants: {
-    background: {
-      primary: 'bg-primary',
-      'primary-alt': 'bg-primary-alt',
-      secondary: 'bg-secondary',
-      accent: 'bg-accent',
-      'accent-alt': 'bg-accent-alt'
-    },
+    background: BackgroundVariants,
     cols: {
       1: 'grid-cols-1',
       2: 'grid-cols-2',

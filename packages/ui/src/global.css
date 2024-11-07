@@ -13,6 +13,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   padding: 0;
+  color: var(--base-black);
 }
 .sb-show-main.sb-main-padded {
   padding: 0;
