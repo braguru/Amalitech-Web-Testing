@@ -5,6 +5,7 @@ import {
   display1,
   display2,
   display3,
+  defaultheadingLevelArgs,
   headingLevel1Args,
   headingLevel2Args,
   headingLevel3Args,
@@ -32,6 +33,7 @@ const meta: Meta<HeadlineProps> = {
       options: [1, 2, 3, 4, 5, 6],
       description: 'The heading level',
       table: {
+        type: { summary: 'number' },
         defaultValue: { summary: '2' }
       }
     },
@@ -40,6 +42,7 @@ const meta: Meta<HeadlineProps> = {
       options: textColor,
       description: 'Color of text',
       table: {
+        type: { summary: 'string' },
         defaultValue: { summary: 'black' }
       }
     },
@@ -48,7 +51,8 @@ const meta: Meta<HeadlineProps> = {
         type: 'radio'
       },
       options: ['display-1', 'display-2', 'display-3'],
-      description: 'Applies a display style to the heading'
+      description: 'Applies a display style to the heading',
+      table: { type: { summary: 'string' } }
     },
     children: {
       description: 'The content of the heading'
@@ -59,6 +63,10 @@ const meta: Meta<HeadlineProps> = {
 export default meta
 
 type Story = StoryObj<HeadlineProps>
+
+export const DefaultHeadingLevel: Story = {
+  args: defaultheadingLevelArgs
+}
 
 export const HeadingLevel1: Story = {
   args: headingLevel1Args

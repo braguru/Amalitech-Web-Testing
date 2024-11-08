@@ -1,45 +1,51 @@
 import { HeadlineProps } from './Headline.types'
 
+export const defaultheadingLevelArgs: HeadlineProps = {
+  level: 2,
+  color: 'black',
+  children: 'Empowering the next generation of technology leaders in Africa'
+}
+
 export const headingLevel1Args: HeadlineProps = {
-  level: 1,
-  children: 'Heading for level 1'
+  ...defaultheadingLevelArgs,
+  level: 1
 }
 
 export const headingLevel2Args: HeadlineProps = {
-  level: 2,
-  children: 'Heading for level 2'
+  ...defaultheadingLevelArgs,
+  level: 2
 }
 
 export const headingLevel3Args: HeadlineProps = {
-  level: 3,
-  children: 'Heading for level 3'
+  ...defaultheadingLevelArgs,
+  level: 3
 }
 export const headingLevel4Args: HeadlineProps = {
-  level: 4,
-  children: 'Heading for level 4'
+  ...defaultheadingLevelArgs,
+  level: 4
 }
 export const headingLevel5Args: HeadlineProps = {
-  level: 5,
-  children: 'Heading for level 5'
+  ...defaultheadingLevelArgs,
+  level: 5
 }
 export const headingLevel6Args: HeadlineProps = {
-  level: 6,
-  children: 'Heading for level 6'
+  ...defaultheadingLevelArgs,
+  level: 6
 }
 
 // Stories for display styles
 export const display1: HeadlineProps = {
+  ...defaultheadingLevelArgs,
   level: 2,
-  as: 'display-1',
-  children: 'Display 1 styles applied to h2'
+  as: 'display-1'
 }
 export const display2: HeadlineProps = {
+  ...defaultheadingLevelArgs,
   level: 3,
-  as: 'display-2',
-  children: 'Display 2 styles applied to h3'
+  as: 'display-2'
 }
 export const display3: HeadlineProps = {
+  ...defaultheadingLevelArgs,
   level: 4,
-  as: 'display-3',
-  children: 'Display 3 styles applied to h4'
+  as: 'display-3'
 }
