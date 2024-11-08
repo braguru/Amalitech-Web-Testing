@@ -5,7 +5,7 @@ pipeline {
         nodejs 'node20'
     }
     stages {
-        stage('Test') {
+        stage('Lint') {
             steps {
                 script {
                     sh 'npm install'
@@ -17,6 +17,12 @@ pipeline {
                         echo 'Linting failed.'
                         error "Error: ${e.message}"
                     }
+                }
+            }
+        }
+        stage('Format') {
+            steps {
+                script {
                     try {
                         echo 'Running formatting...'
                         sh "npm run format --filter='[{{ github.event_name == 'pull_request' && '...[origin/main]' || '...[HEAD^]' }}]'"
@@ -25,6 +31,12 @@ pipeline {
                         echo 'Formatting failed.'
                         error "Error: ${e.message}"
                     }
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
                     try {
                         echo 'Running tests...'
                         sh "npm run test --filter='[{{ github.event_name == 'pull_request' && '...[origin/main]' || '...[HEAD^]' }}]'"
@@ -49,13 +61,13 @@ pipeline {
     }
     post {
         always {
-            echo '========always========'
+            echo '========Pipeline completed ==========='
         }
         success {
-            echo '========pipeline executed successfully ========'
+            echo '========Pipeline executed successfully ========'
         }
         failure {
-            echo '========pipeline execution failed========'
+            echo '========Pipeline execution failed========'
         }
     }
 }
