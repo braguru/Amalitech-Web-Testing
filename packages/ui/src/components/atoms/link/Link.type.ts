@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react'
-import { LinkVariantsProps } from './Link.partials'
+import { LinkVariantsProps } from './Link.cva'
 
 export enum TargetProps {
   BLANK = '_blank',
@@ -8,9 +8,10 @@ export enum TargetProps {
   TOP = '_top'
 }
 
-export type LinkProps = {
+export interface LinkProps
+  extends Omit<ComponentProps<'a'>, 'color'>,
+    LinkVariantsProps {
   iconLeft?: boolean
   external?: boolean
   label?: string
-} & ComponentProps<'a'> &
-  LinkVariantsProps
+}
