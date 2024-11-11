@@ -20,8 +20,8 @@ const meta: Meta<typeof Text> = {
 
     type: {
       options: [
-        'feature',
         'hero',
+        'feature',
         'highlight',
         'content',
         'caption',
@@ -39,43 +39,43 @@ const meta: Meta<typeof Text> = {
 export default meta
 type Story = StoryObj<TextProps>
 
-export const feature: Story = {
+export const highlight: Story = {
   args: {
-    type: 'feature',
-    variant: 'emphasis',
+    type: 'highlight',
+    variant: 'standard',
     color: 'neutral',
     children:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+      'AmaliTech is a social enterprise that harnesses the potential of remote working to build the future of work in sub-Saharan Africa.Lady displaying an AmaliTech folder A large group of people, representing the whole company We provide employment pathways in the tech sector to young graduates in Sub-Saharan Africa, connecting them to the global demand for tech talent. Our approach combines training with employment and continuous learning  because evidence show that only this integrated approach actually works. By focusing on skilled ICT services, we contribute to ecosystem development and to the emergence of the future-proof industry with growth engine potential.'
   }
 }
-
 export const hero: Story = {
   args: {
-    ...feature.args,
+    ...highlight.args,
     type: 'hero'
   }
 }
-export const highlight: Story = {
+export const feature: Story = {
   args: {
-    ...feature.args,
-    type: 'highlight'
+    ...highlight.args,
+    type: 'feature'
   }
 }
+
 export const content: Story = {
   args: {
-    ...feature.args,
+    ...highlight.args,
     type: 'content'
   }
 }
 export const caption: Story = {
   args: {
-    ...feature.args,
+    ...highlight.args,
     type: 'caption'
   }
 }
 export const footnote: Story = {
   args: {
-    ...feature.args,
+    ...highlight.args,
     type: 'footnote'
   }
 }

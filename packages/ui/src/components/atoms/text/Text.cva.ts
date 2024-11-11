@@ -3,7 +3,7 @@ import { TextColorVariants } from '../../../shared/colors.cva'
 export const TextVariant = cva('tracking-normal', {
   variants: {
     type: {
-      hero: 'leading-3 lg:text-body-2xl lg:leading-lh-body-3xl',
+      hero: 'text-body-xl leading-lh-body-2xl  lg:text-body-2xl lg:leading-lh-body-3xl',
       feature: 'lg:text-body-xl text-body-lg leading-lh-body-xl',
       highlight:
         'lg:text-body-lg  lg:leading-lh-body-xl text-body-md leading-lh-body-lg',
