@@ -15,10 +15,18 @@ const meta: Meta<typeof Text> = {
   argTypes: {
     variant: {
       options: ['bold', 'accent', 'emphasis', 'standard'],
-      control: { type: 'select' }
+      control: { type: 'select' },
+      description: 'The font weight of the text',
+      table: {
+        defaultValue: { summary: 'standard' },
+        type: {
+          summary: 'bold | accent | emphasis | standard '
+        }
+      }
     },
 
     type: {
+      description: 'The different kinds type of typography',
       options: [
         'hero',
         'feature',
@@ -27,11 +35,33 @@ const meta: Meta<typeof Text> = {
         'caption',
         'footnote'
       ],
-      control: { type: 'select' }
+      control: { type: 'select' },
+      table: {
+        defaultValue: { summary: 'highlight' },
+        type: {
+          summary: 'hero | feature | highlight | content | caption| footnote '
+        }
+      }
     },
     color: {
+      description: 'The color of the text, from the theme palette',
       options: textColor,
-      control: { type: 'select' }
+      control: { type: 'select' },
+      table: {
+        defaultValue: { summary: 'neutral' },
+        type: {
+          summary:
+            'primary | secondary | accent | accentAlt | neutral| primary-alt | black | white'
+        }
+      }
+    },
+    children: {
+      description: 'The content of the text',
+      table: {
+        type: {
+          summary: 'ReactNode'
+        }
+      }
     }
   }
 }
