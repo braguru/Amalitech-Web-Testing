@@ -1,64 +1,63 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import React, { ComponentProps } from 'react'
-import {
-  backgroundContainer,
-  defaultContainer,
-  fluidContainer
-} from './Container.mock'
+import { defaultContainer, fluidContainer } from './Container.mock'
 import { ContainerType } from './Container.types'
-import { Container } from './Container'
+import { Container as ContainerComponent } from './Container'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import Logo from '../../../assets/images/Logo.png'
 
-const meta: Meta<ComponentProps<typeof Container>> = {
+const meta: Meta<ComponentProps<typeof ContainerComponent>> = {
   title: 'UI Components/Container',
+  // component: Container,
   tags: ['autodocs'],
   argTypes: {
     background: {
-      control: 'color',
       description: 'Container background color',
-      table: {
-        type: {
-          summary: 'primary | secondary | primary-alt | secondary-alt | accent'
-        }
-      }
+      control: { type: 'select' },
+      options: ['primary-alt', 'accent-alt', 'neutral']
     },
     gap: {
-      control: 'number',
       description: 'Margin bottom of the container',
-      table: { type: { summary: '1 | 2 | 8 | 12 | 16 | 24 | 32 | 48' } }
+      control: { type: 'select' },
+      options: [1, 2, 8, 12, 16, 24, 32, 48],
+      table: { type: { summary: 'number' }, defaultValue: { summary: '8' } }
     },
     fluid: {
-      control: 'boolean',
-      description: 'Sets the container to full width when value is set to true'
+      description: 'Sets the container to full width when value is set to true',
+      table: {
+        defaultValue: { summary: 'false' }
+      }
     }
   }
 }
 
 export default meta
 
-export const ContainerStory: StoryObj<typeof Container> = {
+export const Container: StoryObj<typeof ContainerComponent> = {
   args: defaultContainer,
   render: (args: ContainerType) => (
-    <Container gap={2} {...args}>
-      <div className="relative overflow-hidden w-[100%] h-80 text-white flex items-center justify-center">
-        <p className="text-xl">General Team Expansion</p>
-        <div className="absolute w-20 h-20 -top-4  -right-8 bg-slate-950 border-8 border-white rounded-full"></div>
+    <ContainerComponent gap={2} {...args}>
+      <div className="relative overflow-hidden w-[100%] h-80 text-white flex flex-col items-center gap-5 justify-center">
+        <img
+          src={Logo}
+          alt="Logo"
+          className="absolute left-0 top-0 w-fit h-72 "
+        />
+        <p className="text-heading-sm font-semibold z-10">
+          Need Expert Developers? <br /> We've Got You Covered!
+        </p>
+        <p className="text-body-sm font-bold text-ellipsis overflow-hidden whitespace-nowrap max-w-[75%] z-10 text-center text-neutral-100">
+          Reach out to discuss your development needs, and let’s build something
+          great together.
+        </p>
+        <div className="absolute w-20 h-20 -top-8 -right-8 bg-primary border-8 border-white rounded-full" />
       </div>
-    </Container>
+    </ContainerComponent>
   )
 }
 
-export const Fluid: StoryObj<typeof Container> = {
-  ...ContainerStory,
+export const FluidContainer: StoryObj<typeof ContainerComponent> = {
+  ...Container,
   args: fluidContainer
-}
-
-export const backgroundColor: StoryObj<typeof Container> = {
-  args: backgroundContainer,
-  render: (args) => (
-    <Container {...args}>
-      <div className="h-80 text-center flex items-center justify-center">
-        <p>Hurray!!</p>
-      </div>
-    </Container>
-  )
 }

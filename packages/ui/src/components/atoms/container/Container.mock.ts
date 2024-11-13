@@ -1,14 +1,12 @@
 import { ContainerType } from './Container.types'
 
 export const defaultContainer: Partial<ContainerType> = {
-  background: 'primary'
+  background: 'primary-alt',
+  fluid: false,
+  gap: 8
 }
 
 export const fluidContainer: Partial<ContainerType> = {
   fluid: true,
-  background: 'secondary'
-}
-
-export const backgroundContainer: Partial<ContainerType> = {
-  background: 'primary'
+  background: 'accent-alt'
 }
