@@ -8,6 +8,7 @@ import {
   fonts,
   gaps,
   fontSize,
+  gaps,
   lineHeight,
   spacing
 } from '../tailwind-theme-objects'
@@ -22,6 +23,7 @@ export const generateTailwindConfigTheme = (): Partial<
     container,
     gap: gaps,
     colors,
+    gap: gaps,
     screens: breakpoints,
     fontFamily: fonts,
     lineHeight,

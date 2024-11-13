@@ -20,7 +20,7 @@ export const ExternalLink = ({
   as,
   ...props
 }: Readonly<PropsWithChildren<LinkProps>>): React.ReactElement => {
-  const content = children || label
+  const content = children ?? label
 
   return (
     <a
@@ -70,6 +70,6 @@ export const InternalLink = ({
     style={style}
     {...props}
   >
-    {children || label}
+    {children ?? label}
   </NextLink>
 )

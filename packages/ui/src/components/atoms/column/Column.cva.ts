@@ -1,6 +1,8 @@
-export const columnConfig = {
+import { cva } from 'class-variance-authority'
+import { BackgroundVariants } from '../../../shared/colors.cva'
+
+export const ColumnSpanVariant = {
   xs: {
-    0: 'xs:col-none',
     1: 'xs:col-span-1',
     2: 'xs:col-span-2',
     3: 'xs:col-span-3',
@@ -15,7 +17,6 @@ export const columnConfig = {
     12: 'xs:col-span-12'
   },
   sm: {
-    0: 'sm:col-none',
     1: 'sm:col-span-1',
     2: 'sm:col-span-2',
     3: 'sm:col-span-3',
@@ -30,7 +31,6 @@ export const columnConfig = {
     12: 'sm:col-span-12'
   },
   md: {
-    0: 'md:col-none',
     1: 'md:col-span-1',
     2: 'md:col-span-2',
     3: 'md:col-span-3',
@@ -45,7 +45,6 @@ export const columnConfig = {
     12: 'md:col-span-12'
   },
   lg: {
-    0: 'lg:col-none',
     1: 'lg:col-span-1',
     2: 'lg:col-span-2',
     3: 'lg:col-span-3',
@@ -60,7 +59,6 @@ export const columnConfig = {
     12: 'lg:col-span-12'
   },
   xl: {
-    0: 'xl:col-none',
     1: 'xl:col-span-1',
     2: 'xl:col-span-2',
     3: 'xl:col-span-3',
@@ -75,3 +73,14 @@ export const columnConfig = {
     12: 'xl:col-span-12'
   }
 }
+
+export const ColumnVariants = cva('', {
+  variants: {
+    background: BackgroundVariants,
+    ...ColumnSpanVariant
+  },
+  defaultVariants: {
+    sm: 12,
+    xs: 12
+  }
+})

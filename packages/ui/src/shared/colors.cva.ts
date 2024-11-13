@@ -27,5 +27,5 @@ export const TextColorVariants = {
 }
 
 export const InteractiveColorVariants = {
-  // TODO: populate the respective values
+  return: null
 }

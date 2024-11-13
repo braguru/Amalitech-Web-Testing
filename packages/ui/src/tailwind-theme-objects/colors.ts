@@ -40,7 +40,7 @@ export const colors = {
     '800': 'var(--primary-alt-800)',
     '900': 'var(--primary-alt-900)',
     '1000': 'var(--primary-alt-1000)',
-    subtle: 'var(--primary-alt-600)'
+    subtle: 'var(--primary-alt-700)'
   },
   neutral: {
     DEFAULT: 'var(--neutrals-600)',
