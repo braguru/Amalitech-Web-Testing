@@ -1,9 +1,8 @@
-import { RowVariants } from './Row'
+import { BackgroundVariants } from 'src/shared/colors.cva'
 import { CVAVariantProps } from 'src/shared/utils.type'
-
+import { RowVariants } from './Row.cva'
 export interface RowProps
   extends React.HTMLAttributes<HTMLDivElement>,
     CVAVariantProps<typeof RowVariants> {
-  children: React.ReactNode
-  classNames?: string
+  background?: keyof typeof BackgroundVariants
 }

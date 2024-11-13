@@ -5,11 +5,11 @@ export const defaultRow: Partial<RowProps> = {
 }
 
 export const rowGap: Partial<RowProps> = {
-  gap: 48,
+  gap: 40,
   background: 'accent-alt'
 }
 
 export const rowCols: Partial<RowProps> = {
-  cols: 6,
+  cols: 12,
   background: 'accent-alt'
 }

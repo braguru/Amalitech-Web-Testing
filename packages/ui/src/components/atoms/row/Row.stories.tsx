@@ -6,30 +6,45 @@ import { defaultRow, rowCols, rowGap } from './Row.mock'
 const meta: Meta<ComponentProps<typeof Row>> = {
   title: 'UI Components/Row',
   tags: ['autodocs'],
+  component: Row,
   argTypes: {
     background: {
-      control: 'color',
       description: 'Row container background color',
+      control: {
+        type: 'select'
+      },
+      options: ['primary', 'primary-alt', 'secondary', 'accent', 'accent-alt'],
       table: {
         type: {
           summary: 'primary | primary-alt | secondary | accent | accent-alt'
         }
       }
     },
-    gap: {
-      control: 'number',
-      description: 'Gaps between elements in the container',
+    cols: {
+      description: 'Number of column container span.',
+      control: {
+        type: 'select'
+      },
+      options: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       table: {
         type: {
-          summary: '0 | 2 | 4 | 6 | 8 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56'
+          summary: 'Accepts the following values:',
+          detail: '1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12'
         }
       }
     },
-    cols: {
-      control: 'number',
-      description: 'Number of columns of the Row container',
+    gap: {
+      name: 'gap',
+      options: [0, 2, 4, 6, 8, 12, 16, 20, 24, 32, 40, 48, 56],
+      control: {
+        type: 'select'
+      },
+      description: 'Gaps between elements in the container',
       table: {
-        type: { summary: '1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12' }
+        type: {
+          summary: 'Accepts the following values:',
+          detail: '0 | 2 | 4 | 6 | 8 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56'
+        }
       }
     }
   }
@@ -40,7 +55,7 @@ export default meta
 export const RowStory: StoryObj<typeof Row> = {
   args: defaultRow,
   render: (args) => (
-    <Row {...args} gap={4}>
+    <Row {...args}>
       <div className="h-40 col-span-12 "></div>
     </Row>
   )
