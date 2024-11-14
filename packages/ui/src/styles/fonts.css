@@ -1,6 +1,6 @@
 /* Poppins font definition */
 @font-face {
-  font-family: CCode128_S3;
+  font-family: 'Poppins';
   src: url('../assets/fonts/poppins/poppins-v21-latin-100.woff2')
     format('woff2');
   font-weight: normal;
@@ -357,4 +357,9 @@
   font-weight: 900;
   src: url('../assets/fonts/inter/inter-v18-latin-900italic.woff2')
     format('woff2');
+}
+
+:root {
+  --fontFamilyInter: 'Inter', 'Arial', 'Segoe UI';
+  --fontFamilyPoppins: 'Poppins', 'sans-serif', 'Roboto', 'Open Sans';
 }

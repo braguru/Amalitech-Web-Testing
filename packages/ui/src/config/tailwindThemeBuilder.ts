@@ -6,7 +6,6 @@ import {
   colors,
   container,
   fonts,
-  gaps,
   fontSize,
   lineHeight,
   spacing
