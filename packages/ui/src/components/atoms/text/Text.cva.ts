@@ -24,7 +24,7 @@ export const TextVariant = cva('tracking-normal', {
   },
 
   defaultVariants: {
-    type: 'highlight',
+    type: 'content',
     variant: 'standard'
   }
 })

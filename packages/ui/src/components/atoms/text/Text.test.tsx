@@ -5,11 +5,11 @@ import { Text } from './Text' // Import the component to test
 
 describe('Text Component', () => {
   // Test case for rendering with default props
-  it('renders with default props (highlight and standard)', () => {
+  it('renders with default props (content and standard)', () => {
     const { container } = render(<Text>Default Text</Text>)
 
     expect(container.firstChild).toHaveClass('tracking-normal')
-    expect(container.firstChild).toHaveClass('text-body-md')
+    expect(container.firstChild).toHaveClass('text-body-sm')
     expect(container.firstChild).toHaveClass('font-normal') // Standard fontWeight
   })
 

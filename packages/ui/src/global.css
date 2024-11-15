@@ -26,6 +26,7 @@ body {
   color: var(--base-black);
   font-size: var(--ts-body-md);
 }
+
 .sb-show-main.sb-main-padded {
   padding: 0;
 }

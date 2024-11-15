@@ -8,7 +8,8 @@ import {
   fonts,
   fontSize,
   lineHeight,
-  spacing
+  spacing,
+  gaps
 } from '../tailwind-theme-objects'
 
 export const generateTailwindConfigTheme = (): Partial<
