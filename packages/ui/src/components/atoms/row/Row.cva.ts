@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority'
-import { BackgroundVariants } from 'src/shared/colors.cva'
+import { BackgroundVariants } from '../../../shared/colors.cva'
 
 const cols = {
   1: 'grid-cols-1',

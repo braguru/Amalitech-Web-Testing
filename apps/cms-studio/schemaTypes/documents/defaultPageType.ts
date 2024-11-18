@@ -16,6 +16,7 @@ export const defaultPageType = defineType({
       type: 'array',
       title: 'Page Content',
       of: [
+        // TODO: Remove and replace appopriate modules
         defineArrayMember({
           name: 'linker',
           type: 'link',

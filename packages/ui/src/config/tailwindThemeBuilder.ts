@@ -20,7 +20,6 @@ export const generateTailwindConfigTheme = (): Partial<
     borderRadius,
     boxShadow,
     container,
-    gap: gaps,
     colors,
     screens: breakpoints,
     fontFamily: fonts,
