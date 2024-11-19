@@ -1,7 +1,7 @@
 import React, { ComponentProps } from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import Row from './Row'
-import { defaultRow, rowCols, rowGap } from './Row.mock'
+import { RowArgs } from './Row.mock'
 
 const meta: Meta<ComponentProps<typeof Row>> = {
   title: 'UI Components/Row',
@@ -52,21 +52,24 @@ const meta: Meta<ComponentProps<typeof Row>> = {
 
 export default meta
 
-export const RowStory: StoryObj<typeof Row> = {
-  args: defaultRow,
-  render: (args) => (
-    <Row {...args}>
-      <div className="h-40 col-span-12 "></div>
-    </Row>
-  )
+const RowStory: StoryObj<typeof Row> = {
+  args: {
+    gap: 8,
+    cols: 6
+  },
+  render: (args) => <RowArgs {...args} />
 }
 
 export const Gap: StoryObj<typeof Row> = {
   ...RowStory,
-  args: rowGap
+  args: {
+    gap: 8
+  }
 }
 
 export const Columns: StoryObj<typeof Row> = {
   ...RowStory,
-  args: rowCols
+  args: {
+    cols: 6
+  }
 }
