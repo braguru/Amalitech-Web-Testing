@@ -1,3 +1,5 @@
 // all block schemas are exported from here
 
-export const blocks = []
+import {numberModuleSchema} from './numbersModuleSchema'
+
+export const blocks = [numberModuleSchema]

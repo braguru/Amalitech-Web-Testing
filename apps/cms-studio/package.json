@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "sanity dev",
     "start": "sanity start",
+    "extract": "npx sanity schema extract && npx sanity typegen generate",
     "lint": "eslint --fix ",
     "build": "sanity build",
     "deploy": "sanity deploy",
@@ -18,6 +19,7 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/client": "^6.22.4",
     "@sanity/vision": "3.62.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
