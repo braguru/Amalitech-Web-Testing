@@ -5,13 +5,10 @@ pipeline {
         nodejs 'node20'
     }
     stages {
-        stage('Prep') {
+        stage('Inatalling dependencies') {
             steps {
                 script {
-                    sh 'rm -rf package-lock.json'
-                    sh 'find . -name \"node_modules\" -type d -prune -exec rm -rf "{}" +'
-                    sh 'find . -name \".sanity\" -type d -prune -exec rm -rf "{}" +'
-                    sh 'find . -name \"dist\" -type d -prune -exec rm -rf "{}" +'
+                    echo 'Installing dependencies...'
                     sh 'npm i'
                 }
             }
@@ -68,6 +65,7 @@ pipeline {
                 }
             }
         }
+
         stage('Prepare Environment'){
             steps{
                  withCredentials([file(credentialsId: 'amalitech-website-env', variable: 'ENV_FILE')]){
@@ -97,13 +95,17 @@ pipeline {
     }
     post {
         always {
-            echo '========Pipeline completed ==========='
+            script {
+                echo 'Cleaning workspace...'
+                cleanWs()
+            }
+            echo '========Pipeline completed ===========😊'
         }
         success {
-            echo '========Pipeline executed successfully ========'
+            echo '========Pipeline executed successfully ========👌'
         }
         failure {
-            echo '========Pipeline execution failed========'
+            echo '========Pipeline execution failed========😒'
         }
     }
 }
