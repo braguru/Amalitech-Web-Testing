@@ -67,3 +67,4 @@ pnpm-debug.log*
 *.pem
 
 storybook-static
+.sanity
