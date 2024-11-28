@@ -65,6 +65,18 @@ pipeline {
                 }
             }
         }
+         stage('Prepare Environment'){
+            steps{
+                 withCredentials([file(credentialsId: 'amalitech-website-env', variable: 'ENV_FILE')]){
+                 // Copy the env file to both repositories
+                     sh"""
+                     cp $ENV_FILE ./apps/cms-studio/.env
+                     cp $ENV_FILE ./apps/storybook/.env
+                     cp $ENV_FILE ./apps/web/.env
+                     """
+                }
+            }
+        }
         stage('Build') {
             steps {
                 script {
