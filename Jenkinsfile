@@ -13,48 +13,33 @@ pipeline {
                 }
             }
         }
-        stage('Lint') {
+        
+        stage('Lint, Format, and Test') {
             steps {
                 script {
                     try {
+                        // Linting
                         echo 'Running linting...'
                         sh "npm run lint --filter='[{{ github.event_name == 'pull_request' && '...[origin/develop]' || '...[HEAD^]' }}]'"
                         echo 'Linting completed successfully.'
-                    } catch (e) {
-                        error 'Linting failed.'
-                        error "Error: ${e.message}"
-                    }
-                }
-            }
-        }
-        stage('Format') {
-            steps {
-                script {
-                    try {
+
+                        // Formatting
                         echo 'Running formatting...'
                         sh "npm run format --filter='[{{ github.event_name == 'pull_request' && '...[origin/develop]' || '...[HEAD^]' }}]'"
                         echo 'Formatting completed successfully.'
-                        } catch (e) {
-                        error 'Formatting failed.'
-                        error "Error: ${e.message}"
-                    }
-                }
-            }
-        }
-        stage('Test') {
-            steps {
-                script {
-                    try {
+
+                        // Testing
                         echo 'Running tests...'
                         sh "npm run test --filter='[{{ github.event_name == 'pull_request' && '...[origin/develop]' || '...[HEAD^]' }}]'"
                         echo 'Tests completed successfully.'
                     } catch (e) {
-                        error 'Testing failed.'
+                        error 'One or more steps failed.'
                         error "Error: ${e.message}"
                     }
                 }
             }
         }
+
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
@@ -65,8 +50,8 @@ pipeline {
                 }
             }
         }
-
         stage('Prepare Environment'){
+
             steps{
                  withCredentials([file(credentialsId: 'amalitech-website-env', variable: 'ENV_FILE')]){
                  // Copy the env file to both repositories
