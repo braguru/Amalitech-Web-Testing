@@ -5,7 +5,7 @@ export const HeadlineVariants = cva('font-sans font-bold', {
   variants: {
     level: {
       1: [
-        'text-body-2xl leading-lh-headline-xs md:text-heading-lg leading-lh-headline-xl '
+        'text-body-2xl leading-lh-headline-xs md:text-heading-lg leading-lh-headline-xl'
       ],
       2: [
         'text-body-xl leading-lh-headline-2xs md:text-heading-md leading-lh-headline-lg'
