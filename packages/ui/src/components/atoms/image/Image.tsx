@@ -1,39 +1,27 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { Suspense } from 'react'
+import { cn } from '../../../shared/utils'
+import { ImageVariants } from './Image.cva'
 import { NextImageProps } from './Image.types'
+import { ImageLoader } from './Image.loading'
 
 export const ImageComponent = ({
   src,
   alt,
   width,
   height,
-  layout = 'intrinsic',
-  quality,
-  priority,
-  loading = 'lazy',
-  placeholder,
-  blurDataURL,
-  className,
-  style,
-  onLoad,
-  onError
+  ratio
 }: NextImageProps): React.ReactElement => (
-  <Image
-    src={src}
-    alt={alt}
-    width={Number(width)}
-    height={Number(height)}
-    layout={layout}
-    quality={quality}
-    priority={loading ? undefined : priority}
-    loading={loading}
-    placeholder={placeholder}
-    blurDataURL={
-      placeholder === 'blur' && !blurDataURL ? String(src) : blurDataURL
-    }
-    className={className}
-    style={style}
-    onLoad={onLoad}
-    onError={onError}
-  />
+  <div>
+    <Suspense fallback={<ImageLoader />}>
+      <Image
+        src={src}
+        alt={alt}
+        className={cn(ImageVariants({ aspectRatios: ratio }))}
+        width={Number(width)}
+        height={Number(height)}
+      />
+    </Suspense>
+    {!src && <ImageLoader />}
+  </div>
 )

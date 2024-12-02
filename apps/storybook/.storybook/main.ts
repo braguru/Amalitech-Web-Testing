@@ -1,5 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-vite'
-import path, { dirname, join, resolve } from 'path'
+import { dirname, join, resolve } from 'path'
 import { mergeConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
@@ -10,8 +9,11 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 function getAbsolutePath(value: string): any {
   return dirname(require.resolve(join(value, 'package.json')))
 }
-const config: StorybookConfig = {
-  stories: ['../../../packages/ui/src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+const config = {
+  stories: [
+    '../../../packages/ui/src/**/*.mdx',
+    '../../../packages/ui/src/**/*.stories.@(js|jsx|mjs|ts|tsx)'
+  ],
   addons: [
     '@storybook/addon-themes',
     getAbsolutePath('@storybook/addon-links'),
@@ -21,7 +23,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-designs')
   ],
   framework: {
-    name: getAbsolutePath('@storybook/react-vite'),
+    name: getAbsolutePath('@storybook/nextjs'),
     options: {}
   },
   /**

@@ -1,5 +1,6 @@
 import { cva } from 'class-variance-authority'
 import { BackgroundVariants } from '../../../shared/colors.cva'
+import { gapSizes } from '../../Gap/Gap.cva'
 
 const cols = {
   1: 'grid-cols-1',
@@ -20,21 +21,7 @@ export const RowVariants = cva('grid', {
   variants: {
     background: BackgroundVariants,
     cols,
-    gap: {
-      0: 'gap-none',
-      2: 'gap-3xs',
-      4: 'gap-2xs',
-      6: 'gap-xs',
-      8: 'gap-sm',
-      12: 'gap-md',
-      16: 'gap-lg',
-      20: 'gap-xl',
-      24: 'gap-2xl',
-      32: 'gap-3xl',
-      40: 'gap-4xl',
-      48: 'gap-5xl',
-      56: 'gap-6xl'
-    }
+    gap: gapSizes
   },
   defaultVariants: {
     gap: 4,
