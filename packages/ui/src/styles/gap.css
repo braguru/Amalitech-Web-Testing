@@ -1,14 +1,15 @@
 :root {
-  --xxxs: 0.13rem;
-  --xxs: 0.25rem;
+  --base: 1rem;
+  --3xs: 0.13rem;
+  --2xs: 0.25rem;
   --xs: 0.375rem;
   --sm: 0.5rem;
   --md: 0.75rem;
   --lg: 1rem;
   --xl: 1.25rem;
-  --xxl: 1.5rem;
-  --xxxl: 2rem;
-  --xxxxl: 2.5rem;
-  --xxxxxl: 3rem;
-  --xxxxxxl: 3.5rem;
+  --2xl: 1.5rem;
+  --3xl: 2rem;
+  --4xl: 2.5rem;
+  --5xl: 3rem;
+  --6xl: 3.5rem;
 }

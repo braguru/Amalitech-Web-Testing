@@ -1,5 +1,6 @@
 import { CustomThemeConfig } from 'tailwindcss/types/config'
 import {
+  aspectRatio,
   borderRadius,
   boxShadow,
   breakpoints,
@@ -23,6 +24,7 @@ export const generateTailwindConfigTheme = (): Partial<
     screens: breakpoints,
     fontFamily: fonts,
     lineHeight,
-    fontSize
+    fontSize,
+    aspectRatio: aspectRatio
   }
 })

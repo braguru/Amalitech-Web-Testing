@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import React, { ComponentProps } from 'react'
+import { Container } from './Container'
 import { defaultContainer, fluidContainer } from './Container.mock'
 import { ContainerType } from './Container.types'
-import { Container as ContainerComponent } from './Container'
 
-const meta: Meta<ComponentProps<typeof ContainerComponent>> = {
+const meta: Meta<ComponentProps<typeof Container>> = {
   title: 'UI Components/Container',
-  // component: Container,
-  tags: ['autodocs'],
+  component: Container,
   argTypes: {
     background: {
       description: 'Container background color',
@@ -30,11 +29,12 @@ const meta: Meta<ComponentProps<typeof ContainerComponent>> = {
 }
 
 export default meta
+type Story = StoryObj<typeof Container>
 
-export const Container: StoryObj<typeof ContainerComponent> = {
+export const ContainerStory: Story = {
   args: defaultContainer,
   render: (args: ContainerType) => (
-    <ContainerComponent gap={2} {...args}>
+    <Container gap={2} {...args}>
       <div className="relative overflow-hidden w-[100%] h-80 text-white flex flex-col items-center gap-5 justify-center">
         <svg
           className="absolute left-0 top-0 w-fit h-72 "
@@ -68,11 +68,16 @@ export const Container: StoryObj<typeof ContainerComponent> = {
         </p>
         <div className="absolute w-20 h-20 -top-8 -right-8 bg-primary border-8 border-white rounded-full" />
       </div>
-    </ContainerComponent>
+    </Container>
   )
 }
 
-export const FluidContainer: StoryObj<typeof ContainerComponent> = {
-  ...Container,
+export const FluidContainer: Story = {
+  ...ContainerStory,
   args: fluidContainer
+}
+
+export const Default: Story = {
+  ...ContainerStory,
+  args: defaultContainer
 }

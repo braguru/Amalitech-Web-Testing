@@ -50,7 +50,8 @@ pipeline {
                 }
             }
         }
-         stage('Prepare Environment'){
+        stage('Prepare Environment'){
+
             steps{
                  withCredentials([file(credentialsId: 'amalitech-website-env', variable: 'ENV_FILE')]){
                  // Copy the env file to both repositories
