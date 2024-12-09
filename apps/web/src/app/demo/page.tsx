@@ -4,7 +4,6 @@ import {
   SchemaData
 } from '../../utils/componentMapper/componentMapper'
 import { getDemoPage } from '../../sanity/sanity.config'
-
 export const revalidate = 60
 
 const DemoPage = async (): Promise<React.ReactElement> => {

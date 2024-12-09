@@ -10,7 +10,6 @@ import { next } from '../../packages/eslint-config/next.mjs'
 import { reactInternal } from '../../packages/eslint-config/react-internal.mjs'
 import { testingLibrary } from '../../packages/eslint-config/testing-library.mjs'
 import eslint from '@eslint/js'
-
 export default tseslint.config(
   {
     files: ['app/**/*.{ts,tsx}', 'app/*.{ts,tsx}'],
