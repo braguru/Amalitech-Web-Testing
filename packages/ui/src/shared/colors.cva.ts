@@ -12,7 +12,7 @@ export const BackgroundVariants = {
   neutral: 'bg-neutral',
   'neutral-subtle': 'bg-neutral-subtle',
   'base-white': 'bg-white',
-  'base-black': 'bg-black'
+  'base-black': 'bg-base-black'
 }
 
 export const TextColorVariants = {
@@ -22,7 +22,7 @@ export const TextColorVariants = {
   accent: 'text-accent',
   'accent-alt': 'text-marine',
   neutral: 'text-neutral-800',
-  black: 'text-black',
+  black: 'text-base-black',
   white: 'text-white'
 }
 

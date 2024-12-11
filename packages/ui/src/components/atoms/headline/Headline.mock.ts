@@ -2,7 +2,7 @@ import { HeadlineProps } from './Headline.types'
 
 export const defaultheadingLevelArgs: HeadlineProps = {
   level: 2,
-  color: 'black',
+  color: 'primary-alt',
   children: 'Empowering the next generation of technology leaders in Africa'
 }
 
