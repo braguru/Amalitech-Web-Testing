@@ -15,3 +15,4 @@ export type BackgroundType = Extract<
 >
 
 export type GapsType = 1 | 2 | 8 | 12 | 16 | 24 | 32 | 48
+export type ResponsiveScreenTypes = 'xs' | 'sm' | 'md' | 'lg' | 'xl'

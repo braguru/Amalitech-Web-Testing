@@ -4,7 +4,7 @@ import { Container } from './Container'
 import { render, screen } from '@testing-library/react'
 
 describe('Container Component', () => {
-  test('renders with the correct arial label', () => {
+  test('renders with the correct child element with text "Hello" ', () => {
     render(
       <Container>
         <div>Hello</div>
