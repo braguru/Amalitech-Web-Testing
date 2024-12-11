@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority'
 import { BackgroundVariants } from '../../../shared/colors.cva'
 import { gapSizes } from '../../Gap/Gap.cva'
 
-const cols = {
+export const cols = {
   1: 'grid-cols-1',
   2: 'grid-cols-2',
   3: 'grid-cols-3',

@@ -39,22 +39,6 @@ export type SanityImageDimensions = {
   aspectRatio?: number
 }
 
-export type SanityImageHotspot = {
-  _type: 'sanity.imageHotspot'
-  x?: number
-  y?: number
-  height?: number
-  width?: number
-}
-
-export type SanityImageCrop = {
-  _type: 'sanity.imageCrop'
-  top?: number
-  bottom?: number
-  left?: number
-  right?: number
-}
-
 export type SanityFileAsset = {
   _id: string
   _type: 'sanity.fileAsset'
@@ -75,6 +59,109 @@ export type SanityFileAsset = {
   path?: string
   url?: string
   source?: SanityAssetSourceData
+}
+
+export type Geopoint = {
+  _type: 'geopoint'
+  lat?: number
+  lng?: number
+  alt?: number
+}
+
+export type Demo = {
+  _id: string
+  _type: 'demo'
+  _createdAt: string
+  _updatedAt: string
+  _rev: string
+  slug?: Slug
+  title?: string
+  body?: Array<
+    | ({
+        _key: string
+      } & Link)
+    | ({
+        _key: string
+      } & Text_definition)
+    | ({
+        _key: string
+      } & Headline)
+    | ({
+        _key: string
+      } & Numbers_module)
+  >
+}
+
+export type Slug = {
+  _type: 'slug'
+  current?: string
+  source?: string
+}
+
+export type Numbers_module = {
+  _type: 'numbers_module'
+  layout?: 'default' | 'two_column' | 'stepper'
+  caption?: string
+  headline?: string
+  description?: string
+  background_image?: {
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+  image?: {
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+  image_right?: boolean
+  symbol?: 'percentage' | 'plus'
+  stepper_theme?: 'mixed' | 'primary-alt'
+  grid_theme?: 'dark' | 'light'
+  numbers?: Array<
+    {
+      _key: string
+    } & Number_tile
+  >
+}
+
+export type SanityImage = {
+  asset?: {
+    _ref: string
+    _type: 'reference'
+    _weak?: boolean
+    [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+  }
+  hotspot?: SanityImageHotspot
+  crop?: SanityImageCrop
+  _type: 'image'
+}
+export type SanityImageCrop = {
+  _type: 'sanity.imageCrop'
+  top?: number
+  bottom?: number
+  left?: number
+  right?: number
+}
+
+export type SanityImageHotspot = {
+  _type: 'sanity.imageHotspot'
+  x?: number
+  y?: number
+  height?: number
+  width?: number
 }
 
 export type SanityImageAsset = {
@@ -100,6 +187,13 @@ export type SanityImageAsset = {
   source?: SanityAssetSourceData
 }
 
+export type SanityAssetSourceData = {
+  _type: 'sanity.assetSourceData'
+  name?: string
+  id?: string
+  url?: string
+}
+
 export type SanityImageMetadata = {
   _type: 'sanity.imageMetadata'
   location?: Geopoint
@@ -111,45 +205,11 @@ export type SanityImageMetadata = {
   isOpaque?: boolean
 }
 
-export type Geopoint = {
-  _type: 'geopoint'
-  lat?: number
-  lng?: number
-  alt?: number
-}
-
-export type SanityAssetSourceData = {
-  _type: 'sanity.assetSourceData'
-  name?: string
-  id?: string
-  url?: string
-}
-
-export type Demo = {
-  _id: string
-  _type: 'demo'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  slug?: Slug
-  title?: string
-  body?: Array<
-    | ({
-        _key: string
-      } & Link)
-    | ({
-        _key: string
-      } & Text_definition)
-    | ({
-        _key: string
-      } & Headline)
-  >
-}
-
-export type Slug = {
-  _type: 'slug'
-  current?: string
-  source?: string
+export type Number_tile = {
+  _type: 'number_tile'
+  value?: number
+  caption?: string
+  description?: string
 }
 
 export type Headline = {
@@ -194,15 +254,18 @@ export type AllSanitySchemaTypes =
   | SanityImagePaletteSwatch
   | SanityImagePalette
   | SanityImageDimensions
-  | SanityImageHotspot
-  | SanityImageCrop
   | SanityFileAsset
-  | SanityImageAsset
-  | SanityImageMetadata
   | Geopoint
-  | SanityAssetSourceData
   | Demo
   | Slug
+  | SanityImage
+  | Numbers_module
+  | SanityImageCrop
+  | SanityImageHotspot
+  | SanityImageAsset
+  | SanityAssetSourceData
+  | SanityImageMetadata
+  | Number_tile
   | Headline
   | Text_definition
   | Link

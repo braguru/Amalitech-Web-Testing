@@ -29,7 +29,6 @@ export const HeadlineVariants = cva('font-sans font-bold', {
     colorVariants: TextColorVariants
   },
   defaultVariants: {
-    level: 2,
-    colorVariants: 'black'
+    level: 2
   }
 })
