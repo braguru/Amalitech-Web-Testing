@@ -34,6 +34,10 @@ export const demoDocument = defineType({
           name: 'numbers_module_blok',
           type: 'numbers_module',
         }),
+        defineArrayMember({
+          name: 'imageSliderModuleBlok',
+          type: 'imageSliderModule',
+        }),
       ],
     }),
   ],
