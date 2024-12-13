@@ -89,6 +89,9 @@ export type Demo = {
     | ({
         _key: string
       } & Numbers_module)
+    | ({
+        _key: string
+      } & ImageSliderModule)
   >
 }
 
@@ -96,6 +99,24 @@ export type Slug = {
   _type: 'slug'
   current?: string
   source?: string
+}
+
+export type ImageSliderModule = {
+  _type: 'imageSliderModule'
+  headline?: string
+  text?: string
+  cta?: Array<
+    {
+      _key: string
+    } & Link
+  >
+  orientation?: 'portrait' | 'landscape'
+  autoplay?: boolean
+  slides?: Array<
+    {
+      _key: string
+    } & ImageSlidesType
+  >
 }
 
 export type Numbers_module = {
@@ -137,17 +158,22 @@ export type Numbers_module = {
   >
 }
 
-export type SanityImage = {
-  asset?: {
-    _ref: string
-    _type: 'reference'
-    _weak?: boolean
-    [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+export type ImageSlidesType = {
+  _type: 'imageSlidesType'
+  slideImage?: {
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
   }
-  hotspot?: SanityImageHotspot
-  crop?: SanityImageCrop
-  _type: 'image'
+  caption?: string
 }
+
 export type SanityImageCrop = {
   _type: 'sanity.imageCrop'
   top?: number
@@ -258,8 +284,9 @@ export type AllSanitySchemaTypes =
   | Geopoint
   | Demo
   | Slug
-  | SanityImage
+  | ImageSliderModule
   | Numbers_module
+  | ImageSlidesType
   | SanityImageCrop
   | SanityImageHotspot
   | SanityImageAsset
