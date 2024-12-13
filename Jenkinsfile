@@ -60,7 +60,7 @@ pipeline {
                      cp $ENV_FILE ./apps/storybook/.env
                      cp $ENV_FILE ./apps/web/.env
                      """
-                 }
+                }
             }
         }
         stage('Build') {
