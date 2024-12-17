@@ -35,7 +35,7 @@ export const numberTileThemeFields = [
     options: {
       list: [
         {title: 'Mixed', value: 'mixed'},
-        {title: 'Dark Blue', value: 'primary-alt'},
+        {title: 'Dark Blue Shades', value: 'primary-alt'},
       ],
       layout: 'radio',
       direction: 'horizontal',
@@ -45,13 +45,13 @@ export const numberTileThemeFields = [
     title: 'Number Theme',
     name: 'grid_theme',
     type: 'string',
-    initialValue: 'dark',
+    initialValue: 'primary',
     group: 'numbers',
     hidden: ({parent}) => parent.layout !== 'two_column',
     options: {
       list: [
-        {title: 'Dark', value: 'dark'},
-        {title: 'Light', value: 'light'},
+        {title: 'Primary', value: 'primary'}, // dark-blue text, orange symbol
+        {title: 'Secondary', value: 'primary'}, // white text, orange symbol
       ],
       layout: 'radio',
       direction: 'horizontal',

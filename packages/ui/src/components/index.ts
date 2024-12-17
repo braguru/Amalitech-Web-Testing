@@ -19,3 +19,6 @@ export * from './atoms/headline/Headline.types'
 export * from './atoms/text/Text.types'
 export * from './atoms/flex-wrapper/Flex.types'
 export * from './atoms/flex-item/FlexItem.types'
+
+// Molecule components
+export * from './molecules/NumberTileStepper/NumberTileStepper'

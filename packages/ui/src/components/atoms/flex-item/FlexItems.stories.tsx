@@ -90,6 +90,15 @@ const meta: Meta<ComponentProps<typeof FlexItem>> = {
         type: { summary: 'number' },
         defaultValue: { summary: '100% of the parent container' }
       }
+    },
+    grow: {
+      description:
+        'Determines if an item should grow to fill the space of the parent container',
+      control: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' }
+      }
     }
   }
 }
