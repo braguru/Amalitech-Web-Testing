@@ -118,4 +118,4 @@ export const cvaProperties = {
   }
 }
 
-export const FlexItemVariants = baseCva('w-full h-fit', cvaProperties)
+export const FlexItemVariants = baseCva('w-full ', cvaProperties)

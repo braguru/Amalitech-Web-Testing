@@ -43,7 +43,6 @@ export const NumberTileGrid = ({
               {number.value}
               {symbol}
             </Headline>
-
             <Text variant={'accent'} type={'highlight'} className={'mt-4'}>
               {number.caption}
             </Text>
