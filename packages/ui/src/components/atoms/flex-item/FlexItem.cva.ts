@@ -28,6 +28,11 @@ const positions = {
   auto: 'place-self-auto'
 }
 
+const grow = {
+  true: 'grow',
+  false: ''
+}
+
 export const cvaProperties = {
   variants: {
     xs: {
@@ -102,13 +107,14 @@ export const cvaProperties = {
     },
     padding: paddings,
     position: positions,
-
+    grow,
     background: BackgroundVariants
   },
   compoundVariants: [],
   defaultVariants: {
     position: 'auto' as keyof typeof positions,
-    padding: 2 as keyof typeof paddings
+    padding: 2 as keyof typeof paddings,
+    grow: false
   }
 }
 
