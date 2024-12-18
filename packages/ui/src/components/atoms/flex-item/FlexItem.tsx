@@ -4,7 +4,6 @@ import { cn } from '../../../shared/utils'
 import { FlexItemVariants } from './FlexItem.cva'
 
 const FlexItem = ({
-  background,
   position,
   xs,
   sm,
@@ -20,7 +19,6 @@ const FlexItem = ({
     aria-label={props['aria-label'] ?? 'flex-item'}
     className={cn(
       FlexItemVariants({
-        background,
         position,
         padding,
         xs,
