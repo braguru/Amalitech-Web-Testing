@@ -1,5 +1,5 @@
 import { VariantProps } from 'class-variance-authority'
-import { colors } from 'src/tailwind-theme-objects'
+import { colors } from '../tailwind-theme-objects'
 
 export type CVAVariantProps<T extends (...args: []) => unknown> =
   VariantProps<T>
