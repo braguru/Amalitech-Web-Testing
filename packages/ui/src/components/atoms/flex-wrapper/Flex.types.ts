@@ -1,4 +1,4 @@
-import { BackgroundVariants } from 'src/shared/colors.cva'
+import { BackgroundVariants } from '../../../shared/colors.cva'
 import { CVAVariantProps } from '../../../shared/utils.type'
 import { FlexVariants } from './Flex.cva'
 
