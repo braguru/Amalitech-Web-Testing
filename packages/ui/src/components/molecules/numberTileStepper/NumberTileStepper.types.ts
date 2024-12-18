@@ -1,5 +1,5 @@
 import { VariantProps } from 'class-variance-authority'
-import { NumberTile } from '../../atoms/numberTileGrid/NumberTile.types'
+import { NumberTile } from '../numberTileGrid/NumberTile.types'
 import { StepperVariant } from './NumberTileStepper.cva'
 import { StepperBackgroundVariants } from './NumberTileStepper.utils'
 
@@ -8,7 +8,7 @@ export interface StepperProps
     React.HTMLAttributes<HTMLDivElement> {
   numbers: NumberTile[]
   symbol: 'percentage' | 'plus' | ''
-  theme?: 'mixed' | 'shades'
+  theme?: 'mixed' | 'primary-alt'
 }
 
 export interface StepperColorResult {

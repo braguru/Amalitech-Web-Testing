@@ -2,10 +2,10 @@ import React from 'react'
 import Flex from '../../atoms/flex-wrapper/Flex'
 import FlexItem from '../../atoms/flex-item/FlexItem'
 import { Headline } from '../../atoms/headline/Headline'
-import { NumberTile } from '../../atoms/numberTileGrid/NumberTile.types'
+import { NumberTile } from '../numberTileGrid/NumberTile.types'
 import { cn } from '../../../shared/utils'
 import { Text } from '../../atoms/text/Text'
-import { renderSymbol } from '../../atoms/numberTileGrid/NumberTileGrid.partials'
+import { renderSymbol } from '../numberTileGrid/NumberTileGrid.partials'
 import {
   getStepperColors,
   stepperBreakPointMdValues,

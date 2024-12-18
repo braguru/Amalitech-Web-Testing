@@ -17,7 +17,7 @@ const meta: Meta<NumberTilesProps> = {
   argTypes: {
     theme: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'dark', 'light'],
+      options: ['primary', 'secondary'],
       description:
         'Set theme color for tile. Uses primary for grid variant and dark for step variant',
       table: {
@@ -35,6 +35,21 @@ const meta: Meta<NumberTilesProps> = {
       control: 'object',
       description: 'Array of numbers with captions to display in the grid',
       table: { type: { summary: 'value | caption | description | symbol' } }
+    },
+    symbol: {
+      control: { type: 'select' },
+      description: 'Number tile symbol to use',
+      table: {
+        type: { summary: 'percentage | plus' },
+        defaultValue: { summary: 'plus' }
+      }
+    },
+    border: {
+      description: 'Border style for the tile',
+      table: {
+        type: { summary: 'light | dark' },
+        defaultValue: { summary: 'light' }
+      }
     }
   }
 }

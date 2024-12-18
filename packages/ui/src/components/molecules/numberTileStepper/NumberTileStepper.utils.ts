@@ -1,5 +1,5 @@
 import { TextColorVariants } from '../../../shared/colors.cva'
-import { NumberTile } from '../../atoms/numberTileGrid/NumberTile.types'
+import { NumberTile } from '../numberTileGrid/NumberTile.types'
 import { StepperColorResult } from './NumberTileStepper.types'
 
 export const StepperBackgroundVariants = {
@@ -13,7 +13,7 @@ export const StepperBackgroundVariants = {
 }
 
 export const stepperColors = {
-  shades: [
+  'primary-alt': [
     'primary-alt-700',
     'primary-alt-800',
     'primary-alt-900',

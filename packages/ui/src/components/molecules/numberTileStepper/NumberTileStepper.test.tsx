@@ -96,7 +96,7 @@ describe('getStepperColors util function', () => {
       bgColor: 'primary-alt-800',
       fontColor: 'text-white'
     }
-    const result = getStepperColors('shades', 0, 3)
+    const result = getStepperColors('primary-alt', 0, 3)
 
     expect(result).toEqual({
       bgColor: themeColor.bgColor,
