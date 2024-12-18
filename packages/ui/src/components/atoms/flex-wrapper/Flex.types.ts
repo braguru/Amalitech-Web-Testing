@@ -1,5 +1,5 @@
 import { BackgroundVariants } from 'src/shared/colors.cva'
-import { CVAVariantProps } from 'src/shared/utils.type'
+import { CVAVariantProps } from '../../../shared/utils.type'
 import { FlexVariants } from './Flex.cva'
 
 export interface FlexProps

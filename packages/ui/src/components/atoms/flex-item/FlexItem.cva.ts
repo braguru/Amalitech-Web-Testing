@@ -1,6 +1,6 @@
 import { cva as baseCva } from 'class-variance-authority'
 import { BackgroundVariants } from '../../../shared/colors.cva'
-import { ResponsiveScreenTypes } from 'src/shared/utils.type'
+import { ResponsiveScreenTypes } from '../../../shared/utils.type'
 
 export const responsiveScreens: ResponsiveScreenTypes[] = [
   'lg',
