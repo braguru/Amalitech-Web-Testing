@@ -4,7 +4,6 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "private": true,
   "scripts": {
     "dev": "npm run build",
     "build": "tsup index.ts --format cjs,esm --dts && npm run postbuild && npm run tailwind:build",
@@ -56,5 +55,10 @@
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0"
-  }
+  },
+  "publishConfig": {
+  "access": "public",
+   "registry": "https://registry.npmjs.org/"
+}
+
 }
