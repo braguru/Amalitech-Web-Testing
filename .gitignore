@@ -68,5 +68,5 @@ pnpm-debug.log*
 
 storybook-static
 .sanity
-package-lock.json
-./package-lock.json
+# package-lock.json
+# ./package-lock.json
