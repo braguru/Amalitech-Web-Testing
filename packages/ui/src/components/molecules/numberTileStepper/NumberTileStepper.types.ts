@@ -8,7 +8,7 @@ export interface StepperProps
     React.HTMLAttributes<HTMLDivElement> {
   numbers: NumberTile[]
   symbol: 'percentage' | 'plus' | ''
-  theme?: 'mixed' | 'primary-alt'
+  theme: 'mixed' | 'primary-alt'
 }
 
 export interface StepperColorResult {

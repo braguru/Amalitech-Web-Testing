@@ -71,3 +71,8 @@ export function getStepperColors(
 
   return { bgColor, fontColor }
 }
+
+export const sortNumberTiles = (
+  numbers: NumberTile[] | undefined
+): NumberTile[] | undefined =>
+  numbers?.slice().sort((num1, num2) => num1.value - num2.value)

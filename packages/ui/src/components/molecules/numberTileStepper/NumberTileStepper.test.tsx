@@ -39,7 +39,7 @@ describe('Stepper container Component tests', () => {
     const elementContent = element.children[0]
       ?.getElementsByTagName('h3')
       .item(0)
-    const text = elementContent?.textContent || ''
+    const text = elementContent?.textContent ?? ''
 
     expect(element).toBeInTheDocument()
     expect(text).toEqual('5000')
