@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node generate-deploy.manifest.js",
+    "build": "next build && node generate-deploy.manifest.mjs",
     "start": "next start",
     "lint": "eslint . --max-warnings 0",
     "test": "jest --passWithNoTests --coverage",

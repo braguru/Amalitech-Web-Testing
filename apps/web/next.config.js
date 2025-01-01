@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 module.exports = {
   transpilePackages: ['@amt-web/ui'],
   images: {
@@ -13,5 +14,7 @@ module.exports = {
         hostname: 'pexels.com'
       }
     ]
-  }
+  },
+  output: 'standalone',
 }
+
