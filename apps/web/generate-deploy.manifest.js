@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Define constants for the build directory and output manifest file
-const BUILD_DIR = path.join(__dirname, '.next'); // Adjust if needed
-const OUTPUT_MANIFEST = path.join(BUILD_DIR, 'deploy-manifest.json'); // Save in the .next directory
+const BUILD_DIR = path.join(__dirname, '.next'); // Base directory for build artifacts
+const OUTPUT_MANIFEST = path.join(BUILD_DIR, 'deploy-manifest.json'); // Manifest file path
 
 /**
  * Recursively retrieves file details from a directory.
@@ -23,21 +23,18 @@ function getFilesRecursively(dir, baseDir = dir) {
       const stats = fs.statSync(fullPath);
 
       if (stats.isDirectory()) {
-        // If it's a directory, recursively get files
         fileList = fileList.concat(getFilesRecursively(fullPath, baseDir));
       } else {
-        // Add file details to the list
         fileList.push({
           key: relativePath.replace(/\\/g, '/'), // Normalize path separators
-          size: stats.size, // File size in bytes
-          lastModified: stats.mtime.toISOString(), // Last modified timestamp
+          size: stats.size,
+          lastModified: stats.mtime.toISOString(),
         });
       }
     });
   } catch (err) {
     console.error(`Error reading directory: ${dir}`, err.message);
   }
-
   return fileList;
 }
 
@@ -53,24 +50,17 @@ function generateDeployManifest() {
   const files = getFilesRecursively(BUILD_DIR);
 
   const manifest = {
-    version: '1.0', // Manifest version
+    version: '1.0', // Manifest schema version
+    files,
+    directories: [], // Reserved for future use
     build: {
-      artifactBaseDirectory: '.next', // Base directory for build artifacts
-      artifactFiles: files.map((file) => file.key), // List of file paths
+      artifactBaseDirectory: '.next',
+      artifactFiles: files.map((file) => file.key), // Relative paths of files
     },
-    files, // Detailed file metadata
-    directories: [], // Reserved for directory metadata if needed
-    routes: [
-      {
-        source: '/<*>', // Wildcard route to handle all paths
-        target: '/index.html', // Route to serve index.html
-        status: 200, // HTTP status code
-      },
-    ],
+    routes: [], // Define routes if needed
   };
 
   try {
-    // Write the manifest to the output file
     fs.writeFileSync(OUTPUT_MANIFEST, JSON.stringify(manifest, null, 2));
     console.log(`deploy-manifest.json generated successfully at ${OUTPUT_MANIFEST}`);
   } catch (err) {
