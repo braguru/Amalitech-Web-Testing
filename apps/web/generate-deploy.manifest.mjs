@@ -9,6 +9,7 @@ const amplifyDirectories = [
     join(process.cwd(), '.amplify-hosting', 'compute'),
     join(process.cwd(), '.amplify-hosting', 'compute', 'default'),
     join(process.cwd(), '.next', 'compute', 'default'),
+    join(process.cwd(), '.next'),
 ];
 
 // Remove the .amplify-hosting directory if it exists
@@ -76,5 +77,6 @@ cpSync(join(process.cwd(), '.next', 'static'), amplifyDirectories[2], { recursiv
 // Copy the standalone server files to the appropriate compute directories
 cpSync(join(process.cwd(), '.next', 'standalone'), amplifyDirectories[4], { recursive: true });
 cpSync(join(process.cwd(), '.next', 'standalone'), amplifyDirectories[5], { recursive: true });
+cpSync(join(process.cwd(), '.next', 'standalone'), amplifyDirectories[6], { recursive: true });
 
 console.log(`deploy-manifest.json has been successfully generated at .amplify-hosting/deploy-manifest.json and .next/deploy-manifest.json`);
