@@ -14,7 +14,11 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "test": "turbo run test --filter=@amt-web/ui --filter=web",
-    "test:watch": "turbo run test:watch"
+    "test:watch": "turbo run test:watch",
+    "start:web": "next start apps/web",
+    "storybook": "start-storybook -p 6006",
+    "build:web": "next build apps/web",
+    "build:storybook": "build-storybook -c apps/storybook"
   },
   "devDependencies": {
     "@amt-web/typescript-config": "*",
@@ -47,7 +51,6 @@
   },
   "packageManager": "npm@10.8.2",
   "workspaces": [
-    "apps/*",
     "packages/*"
   ],
   "dependencies": {
