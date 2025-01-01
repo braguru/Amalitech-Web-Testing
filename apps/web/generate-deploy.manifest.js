@@ -3,11 +3,11 @@ const path = require('path');
 
 // Define constants for the build directory and output manifest file
 const BUILD_DIR = path.join(__dirname, '.next'); // Adjust if needed
-const OUTPUT_MANIFEST = path.join(__dirname, 'deploy-manifest.json');
+const OUTPUT_MANIFEST = path.join(BUILD_DIR, 'deploy-manifest.json'); // Save in the .next directory
 
 /**
  * Recursively retrieves file details from a directory.
- * 
+ *
  * @param {string} dir - Directory to scan for files.
  * @param {string} baseDir - Base directory to calculate relative paths.
  * @returns {Array} - List of file details including key, size, and lastModified.
@@ -51,18 +51,28 @@ function generateDeployManifest() {
   }
 
   const files = getFilesRecursively(BUILD_DIR);
-  const directories = []; // Reserved for directory metadata if needed
 
   const manifest = {
     version: '1.0', // Manifest version
-    files, // List of file details
-    directories, // List of directories (currently empty)
+    build: {
+      artifactBaseDirectory: '.next', // Base directory for build artifacts
+      artifactFiles: files.map((file) => file.key), // List of file paths
+    },
+    files, // Detailed file metadata
+    directories: [], // Reserved for directory metadata if needed
+    routes: [
+      {
+        source: '/<*>', // Wildcard route to handle all paths
+        target: '/index.html', // Route to serve index.html
+        status: 200, // HTTP status code
+      },
+    ],
   };
 
   try {
     // Write the manifest to the output file
     fs.writeFileSync(OUTPUT_MANIFEST, JSON.stringify(manifest, null, 2));
-    console.log('deploy-manifest.json generated successfully!');
+    console.log(`deploy-manifest.json generated successfully at ${OUTPUT_MANIFEST}`);
   } catch (err) {
     console.error(`Error writing manifest file: ${OUTPUT_MANIFEST}`, err.message);
   }
