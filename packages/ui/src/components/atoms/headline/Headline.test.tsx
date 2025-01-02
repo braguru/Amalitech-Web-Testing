@@ -1,4 +1,3 @@
-// Headline.test.tsx (Non-Modular)
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -20,7 +19,7 @@ describe('Headline Component', () => {
     )
     const headingElement = screen.getByRole('heading', { level: 3 })
     expect(headingElement).toHaveClass('font-bold')
-    expect(headingElement).toHaveClass('md:text-heading-3xl')
+    expect(headingElement).toHaveClass('md:text-heading-2xl')
     expect(headingElement).toHaveTextContent('Styled Heading')
   })
 

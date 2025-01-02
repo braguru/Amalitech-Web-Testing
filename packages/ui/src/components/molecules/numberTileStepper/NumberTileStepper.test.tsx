@@ -39,7 +39,7 @@ describe('Stepper container Component tests', () => {
     const elementContent = element.children[0]
       ?.getElementsByTagName('h3')
       .item(0)
-    const text = elementContent?.textContent || ''
+    const text = elementContent?.textContent ?? ''
 
     expect(element).toBeInTheDocument()
     expect(text).toEqual('5000')
@@ -96,7 +96,7 @@ describe('getStepperColors util function', () => {
       bgColor: 'primary-alt-800',
       fontColor: 'text-white'
     }
-    const result = getStepperColors('shades', 0, 3)
+    const result = getStepperColors('primary-alt', 0, 3)
 
     expect(result).toEqual({
       bgColor: themeColor.bgColor,

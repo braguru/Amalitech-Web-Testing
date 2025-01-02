@@ -1,15 +1,16 @@
 export const ThemeColorVariant = {
   primary: 'text-primary-alt-1000',
-  secondary: 'text-white',
-  dark: 'text-primary-alt-1000 border-none',
-  light: 'text-white border-none'
+  secondary: 'text-white'
 }
 
 export const SymbolColorVariant = {
   primary: 'text-primary-600',
-  secondary: 'text-primary-600',
-  dark: 'text-primary-alt-1000',
-  light: 'text-white'
+  secondary: 'text-primary-600'
+}
+
+export const borderColor = {
+  light: 'border-neutral-100',
+  dark: 'border-primary-alt-900'
 }
 
 type ColumnBreakpoints = Record<string, number>

@@ -21,4 +21,4 @@ export * from './atoms/flex-wrapper/Flex.types'
 export * from './atoms/flex-item/FlexItem.types'
 
 // Molecule components
-export * from './molecules/NumberTileStepper/NumberTileStepper'
+export * from './molecules/numberTileStepper/NumberTileStepper'
