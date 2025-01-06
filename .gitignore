@@ -70,3 +70,5 @@ storybook-static
 .sanity
 package-lock.json
 ./package-lock.json
+*/.amplify-hosting
+*/.amplify
