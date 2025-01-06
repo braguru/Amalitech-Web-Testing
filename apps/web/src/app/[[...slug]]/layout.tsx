@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-// import '../globals.css'
+import '@amt-web/ui/dist/styles/theme.css'
 
 export default function RootLayout({
   children

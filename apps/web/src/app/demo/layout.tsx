@@ -1,4 +1,5 @@
 // import '../globals.css'
+import '@amt-web/ui/dist/styles/theme.css'
 
 export const metadata = {
   title: 'Next.js',
