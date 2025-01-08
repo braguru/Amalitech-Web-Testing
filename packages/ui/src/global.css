@@ -1,0 +1,32 @@
+@import './styles/borderRadius.css';
+@import './styles/boxShadows.css';
+@import './styles/spacing.css';
+@import './styles/colors.css';
+@import './styles/lineHeight.css';
+@import './styles/textSize.css';
+@import './styles/gap.css';
+@import './styles/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontFamilyPoppins);
+}
+
+body {
+  font-family: var(--fontFamilyInter);
+  padding: 0;
+  color: var(--base-black);
+  font-size: var(--ts-body-md);
+}
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}

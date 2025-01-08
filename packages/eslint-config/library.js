@@ -1,6 +1,6 @@
-const { resolve } = require('node:path');
+const { resolve } = require('node:path')
 
-const project = resolve(process.cwd(), 'tsconfig.json');
+const project = resolve(process.cwd(), 'tsconfig.json')
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
@@ -8,22 +8,22 @@ module.exports = {
   plugins: ['only-warn'],
   globals: {
     React: true,
-    JSX: true,
+    JSX: true
   },
   env: {
-    node: true,
+    node: true
   },
   settings: {
     'import/resolver': {
       typescript: {
-        project,
-      },
-    },
+        project
+      }
+    }
   },
-  ignorePatterns: ['.*.js', 'node_modules/', 'dist/'],
+  ignorePatterns: ['.*.js', 'node_modules/', 'dist/', 'coverage/'],
   overrides: [
     {
-      files: ['*.js?(x)', '*.ts?(x)'],
-    },
-  ],
-};
+      files: ['*.js?(x)', '*.ts?(x)']
+    }
+  ]
+}

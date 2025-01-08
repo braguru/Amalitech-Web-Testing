@@ -43,7 +43,7 @@ dist
 *.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -57,8 +57,21 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Test Coverage
+/coverage/
+**/coverage/
+
+
 # Misc
 .DS_Store
 *.pem
 
 storybook-static
+.sanity
+package-lock.json
+./package-lock.json
+**/.amplify-hosting/
+**/.amplify/
+**/.next
+**/.changeset/
+

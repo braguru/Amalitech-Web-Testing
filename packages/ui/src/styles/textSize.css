@@ -1,0 +1,21 @@
+:root {
+  /* Body */
+  --ts-body-2xs: 0.625rem; /* 10px */
+  --ts-body-xs: 0.75rem; /* 12px */
+  --ts-body-sm: 0.875rem; /* 14px */
+  --ts-body-md: 1rem; /* 16px */
+  --ts-body-lg: 1.125rem; /* 18px */
+  --ts-body-xl: 1.5rem; /* 24px */
+  --ts-body-2xl: 1.75rem; /* 28px */
+
+  /* Heading */
+  --ts-header-3xs: 1.25rem; /* 20px */
+  --ts-header-2xs: 1.5rem; /* 24px */
+  --ts-header-xs: 2rem; /* 32px */
+  --ts-header-sm: 2.5rem; /* 40px */
+  --ts-header-md: 3rem; /* 48px */
+  --ts-header-lg: 3.5rem; /* 56px */
+  --ts-header-xl: 4rem; /* 64px */
+  --ts-header-2xl: 6rem; /* 96px */
+  --ts-header-3xl: 9rem; /*  144px*/
+}

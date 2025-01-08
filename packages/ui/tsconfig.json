@@ -1,12 +1,19 @@
 {
   "extends": "@amt-web/typescript-config/react-library.json",
   "compilerOptions": {
+    "jsx": "react",
     "outDir": "./dist",
+    "baseUrl": "./",
+    "rootDir": "./",
     "paths": {
-      "react": ["./node_modules/@types/react", "./node_modules/react", "./node_modules/next"]
+      "react": [
+        "./node_modules/@types/react",
+        "./node_modules/react",
+        "./node_modules/next"
+      ]
     }
-
   },
-  "include": ["src"],
+  "include": ["src/**/*", "../../jest.d.ts"],
+
   "exclude": ["node_modules", "dist"]
 }

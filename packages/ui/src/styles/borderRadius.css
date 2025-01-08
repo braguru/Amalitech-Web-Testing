@@ -1,0 +1,11 @@
+:root {
+  --round-sharp: 0rem;
+  --round-2xs: 0.125rem;
+  --round-xs: 0.25rem;
+  --round-sm: 0.5rem;
+  --round-md: 0.75rem;
+  --round-lg: 1rem;
+  --round-xl: 1.5rem;
+  --round-2xl: 2.5rem;
+  --round-full: 62.4375rem;
+}

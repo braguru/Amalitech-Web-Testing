@@ -48,6 +48,11 @@ npm run build
 npm run dev
 ```
 
+```bash
+# Will run the development server for component library & storybook.
+npm run ui:dev
+```
+
 #### Lint
 
 ```bash
@@ -62,6 +67,13 @@ npm run lint
 # Will format all the supported `.ts,.js,json,.tsx,.jsx` files.
 # See `@amt-web/eslint-config/prettier-base.js` to customize the behavior.
 npm format
+```
+
+#### Extract and Generate Schema types
+
+```bash
+# Will generate schema.json in `cms-studio` and the types for the schema in `web/src/sanity/sanity.types`. The genereated types can then be used as prop type to the modules
+turbo run extract
 ```
 
 ### Remote Caching
