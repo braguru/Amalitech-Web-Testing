@@ -51,8 +51,7 @@
   },
   "packageManager": "npm@10.8.2",
   "workspaces": [
-    "apps/web",
-    "packages/*"
+    "apps/web"
   ],
   "dependencies": {
     "@changesets/cli": "^2.27.10",
